@@ -55,18 +55,33 @@ body{
 
 #about{
     background-color: rgb(47, 65, 65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about #image-container{
+    flex: 0.7;
 }
 
 #about img{
-    height: 100px;
-    display: inline-block;
-    vertical-align: top;
+    height: 300px;
+    border-radius: 50%;
+}
+
+#about #txt-content{
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#about h1, #about p, #about button{
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 #about p{
-    display: inline-block;
-    vertical-align: top;
-    width: 500px;
+    font-size: 18px;
 }
 
 #about button{
@@ -82,6 +97,11 @@ body{
 #about button:hover{
     background-color: transparent;
     border-color: white;
+}
+
+#about .start-end-div{
+    flex: 0.1;
+    width: 50px;
 }
 
 #skills{
