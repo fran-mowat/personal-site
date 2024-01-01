@@ -9,12 +9,13 @@ body{
 }
 
 .section-div{
-    padding: 10px;
+    padding: 55px;
 }
 
 #menu{
     background-color: rgb(49, 37, 37);
     display: flex;
+    padding: 10px;
 }
 
 #menu p, #menu a{
@@ -30,15 +31,21 @@ body{
 }
 
 #home #name{
-    font-size: 50px;
-    margin-bottom: 10px;
+    font-size: 70px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#home p{
+    margin: 30px;
 }
 
 #home #links{
     display: flex;
     height: 30px;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 80px;
 }
 
 #home #links a{
@@ -50,6 +57,7 @@ body{
 }
 
 #home #scroll{
+    margin-top: 40px;
     font-size: 17px;
 }
 
@@ -118,4 +126,5 @@ body{
 
 #bottom{
     background-color: rgb(54, 49, 49);
+    padding: 10px;
 }
