@@ -57,15 +57,29 @@ body{
     background-color: rgb(47, 65, 65);
 }
 
-#about a button{
+#about img{
+    height: 100px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#about p{
+    display: inline-block;
+    vertical-align: top;
+    width: 500px;
+}
+
+#about button{
     background-color: black;
     border-radius: 5px;
     border: solid rgb(0, 0, 0);
     padding: 10px;
     box-shadow: none;
+    display: block;
+    margin: auto;
 }
 
-#about a button:hover{
+#about button:hover{
     background-color: transparent;
     border-color: white;
 }
