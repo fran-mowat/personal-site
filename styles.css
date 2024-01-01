@@ -1,0 +1,53 @@
+*{
+    font-family: Segoe UI, Roboto, sans-serif;
+    text-align: center;
+}
+
+body{
+    margin: 0px;
+}
+
+.section-div{
+    padding: 10px;
+}
+
+#menu{
+    background-color: rgb(193, 193, 193);
+    display: flex;
+}
+
+#menu p, #menu a{
+    flex: 1;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+#home{
+    background-color: aliceblue;
+}
+
+#home #name{
+    font-size: 50px;
+}
+
+#home #scroll{
+    font-size: 20px;
+}
+
+#about{
+    background-color: azure;
+}
+
+#skills{
+    background-color: beige;
+}
+
+#projects{
+    background-color: blanchedalmond;
+}
+
+#contact{
+    background-color: cornsilk;
+}
