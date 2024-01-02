@@ -121,6 +121,10 @@ body{
     border-color: white;
 }
 
+#about button a{
+    text-decoration: none;
+}
+
 #about .start-end-div{
     flex: 0.1;
     width: 50px;
