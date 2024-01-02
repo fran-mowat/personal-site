@@ -66,6 +66,10 @@ body{
     font-size: 17px;
 }
 
+#home #scroll a{
+    text-decoration: none;
+}
+
 #about{
     background-color: rgb(47, 65, 65);
     display: flex;
