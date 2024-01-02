@@ -6,10 +6,18 @@ let scrollToTop = () => {
 
 let checkScroll = () => {
     let scrollButton = document.getElementById("scroll-to-top");
-    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600){
+    let navBar = document.getElementById("menu");
+
+    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450){
         scrollButton.style.display = "block";
     } else {
         scrollButton.style.display = "none";
+    }
+
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
+        navBar.style.backgroundColor = "rgb(255, 255, 255, 0.5)";
+    } else {
+        navBar.style.backgroundColor = "rgb(49, 37, 37, 1)";
     }
 }
 
