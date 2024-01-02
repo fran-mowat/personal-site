@@ -17,7 +17,7 @@ let checkScroll = () => {
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
         navBar.style.backgroundColor = "rgb(255, 255, 255, 0.5)";
     } else {
-        navBar.style.backgroundColor = "rgb(49, 37, 37, 1)";
+        navBar.style.backgroundColor = "rgb(0, 0, 0, 0)";
     }
 }
 
@@ -26,3 +26,18 @@ let copyEmail = () => {
 }
 
 window.onscroll = function() {checkScroll()};
+
+VANTA.GLOBE({
+    el: "#home",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0xd1d1d1,
+    color2: 0xc8b8ff,
+    backgroundColor: 0x50535
+  })
+  
