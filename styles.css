@@ -130,10 +130,6 @@ body{
     width: 50px;
 }
 
-#skills{
-    background-color: rgb(66, 66, 59);
-}
-
 #projects{
     background-color: rgb(116, 78, 20);
 }
@@ -156,6 +152,40 @@ body{
 }
 
 #projects .project-tile p, #projects .project-tile h1{
+    color: black;
+}
+
+#skills{
+    background-color: rgb(66, 66, 59);
+}
+
+#skills h1{
+    margin-bottom: 50px;
+}
+
+#skills #skills-container{
+    display: flex;
+    margin: auto;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -ms-overflow-style: none; /* disable scroll bar for IE and edge */ 
+    scrollbar-width: none; /* disable scroll bar for firefox */
+}
+
+#skills-container::-webkit-scrollbar{
+    display: none; /* disable scroll bar for chrome, safari and opera */
+}
+
+#skills .skills-tile{
+    flex: 0 0 auto;
+    margin: 20px;
+    background-color: white;
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+}
+
+#skills .skills-tile p, #skills .skills-tile h1{
     color: black;
 }
 
