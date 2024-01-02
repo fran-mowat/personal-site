@@ -129,6 +129,22 @@ body{
     background-color: rgb(28, 27, 59);
 }
 
+#contact #email{
+    height: 100px;
+    background-color: rgb(104, 104, 104);
+    border-radius: 10px;
+    margin: 40px;
+}
+
+#contact #email:hover{
+    background-color: rgb(83, 83, 83);;
+}
+
+#contact #email p{
+    text-align: left;
+    padding: 20px;
+}
+
 #bottom{
     background-color: rgb(54, 49, 49);
     padding: 10px;
