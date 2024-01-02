@@ -194,10 +194,46 @@ body{
     margin: auto;
     background-color: white;
     width: 400px;
+    border-radius: 5px;
+    padding: 10px;
 }
 
-#projects .project-tile p, #projects .project-tile h1{
+#projects .project-tile p, #projects .project-tile h1, #projects .project-tile button, #projects .project-tile span{
     color: black;
+}
+
+#projects .project-tile h1{
+    font-size: 20px;
+    margin: 13px;
+}
+
+#projects .project-tile p{
+    margin: 16px 16px;
+}
+
+#projects .project-tile button{
+    background-color: #F0ECEC;
+    border: solid grey;
+    border-width: thin;
+    border-radius: 3px;
+    padding-inline: 6px;
+}
+
+#projects .project-tile button:hover{
+    border: solid black;
+    background-color: #E5E5E5;
+    border-width: thin;
+}
+
+#projects .project-tile .language-title{
+    display: inline;
+    margin: 3px;
+}
+
+#projects .project-tile .language{
+    font-size: 13px;
+    font-family: monospace;
+    background-color: #F0ECEC;
 }
 
 #skills{
