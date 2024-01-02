@@ -73,7 +73,43 @@ body{
 }
 
 #home #scroll a{
+    display: flex;
+    justify-content: center;
     text-decoration: none;
+}
+
+#home #scroll div{
+    height: 30px;
+    flex: 0;
+}
+
+#home #scroll #scroll-one p{
+    text-align: right;
+    width: 100px;
+    animation: bounce 1.5s ease infinite;
+    text-align: right;
+    margin-right: 3px;
+}
+
+#home #scroll #scroll-two p{
+    text-align: center;
+    width: max-content;
+}
+
+#home #scroll #scroll-three p{
+    width: 100px;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(-20%);
+    }
+    50%{
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(-20%);
+    }
 }
 
 #about{
