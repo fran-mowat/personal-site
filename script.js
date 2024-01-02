@@ -42,11 +42,13 @@ VANTA.GLOBE({
   })
 
 let nudge = (e) => {
-    e.target.style.backgroundColor = "red";
+    e.target.style.boxShadow = "5px 5px 5px #5B5B5B";
+    e.target.style.transform = "translate(0, -2px)";
 }
 
 let reset = (e) => {
-    e.target.style.backgroundColor = "white";
+    e.target.style.boxShadow = "none";
+    e.target.style.transform = "translate(0, 2px)";
 }
 
 let projectTiles = document.getElementsByClassName("project-tile");
