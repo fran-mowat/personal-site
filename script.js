@@ -40,4 +40,19 @@ VANTA.GLOBE({
     color2: 0x35A3E7,
     backgroundColor: 0x50535
   })
-  
+
+let nudge = (e) => {
+    e.target.style.backgroundColor = "red";
+}
+
+let reset = (e) => {
+    e.target.style.backgroundColor = "white";
+}
+
+let projectTiles = document.getElementsByClassName("project-tile");
+
+for (let i = 0; i < projectTiles.length; i++){
+    projectTiles[i].addEventListener("mouseenter", nudge);
+    projectTiles[i].addEventListener("mouseleave", reset);
+}
+
