@@ -13,4 +13,8 @@ let checkScroll = () => {
     }
 }
 
+let copyEmail = () => {
+    navigator.clipboard.writeText("franmowat33@gmail.com");
+}
+
 window.onscroll = function() {checkScroll()};
