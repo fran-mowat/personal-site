@@ -36,7 +36,7 @@ body{
 }
 
 #home{
-    background-color: rgb(80, 87, 94);
+    background-color: #050535;
     font-size: 20px;
     padding: 30px;
 }
@@ -77,7 +77,7 @@ body{
 }
 
 #about{
-    background-color: rgb(47, 65, 65);
+    background-color: rgb(80, 87, 94);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -132,7 +132,7 @@ body{
 }
 
 #projects{
-    background-color: rgb(80, 87, 94);
+    background-color: #050535;
 }
 
 #projects h1{
@@ -161,7 +161,7 @@ body{
 }
 
 #skills{
-    background-color: rgb(66, 66, 59);
+    background-color: rgb(80, 87, 94);
 }
 
 #skills h1{
@@ -195,19 +195,19 @@ body{
 }
 
 #contact{
-    background-color: rgb(28, 27, 59);
+    background-color: #050535;
 }
 
 #contact #email{
     height: 100px;
-    background-color: rgb(104, 104, 104);
+    background-color: rgb(80, 87, 94);
     border-radius: 10px;
     margin: 40px;
     display: flex;
 }
 
 #contact #email:hover{
-    background-color: rgb(83, 83, 83);;
+    background-color: rgb(69, 75, 81);
 }
 
 #contact #email div{
