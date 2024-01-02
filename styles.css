@@ -134,15 +134,25 @@ body{
     background-color: rgb(104, 104, 104);
     border-radius: 10px;
     margin: 40px;
+    display: flex;
 }
 
 #contact #email:hover{
     background-color: rgb(83, 83, 83);;
 }
 
+#contact #email div{
+    flex: 1;
+}
+
+#contact #email img{
+    height: 100px;
+}
+
 #contact #email p{
     text-align: left;
     padding: 20px;
+    flex: 1;
 }
 
 #bottom{
