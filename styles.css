@@ -139,14 +139,22 @@ body{
 }
 
 #about #image-container{
+    height: 300px;
+    width: 300px;
     flex: 0.7;
 }
 
 #about img{
     height: 300px;
     border-radius: 50%;
-    border: 2px solid rgb(42, 128, 192, 0.7);
-    transform: translate(0px, 2px);
+}
+
+#about #border-spin{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    padding: 5px;
+    background: conic-gradient(rgb(42, 128, 192, 0.2) 0deg, rgb(42, 128, 192, 0.2) 90deg, #2A80C0 100deg, #2A80C0 105deg, rgb(42, 128, 192, 0.2) 115deg);
 }
 
 #about #txt-content{
