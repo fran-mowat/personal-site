@@ -145,6 +145,8 @@ body{
 #about img{
     height: 300px;
     border-radius: 50%;
+    border: 2px solid rgb(42, 128, 192, 0.7);
+    transform: translate(0px, 2px);
 }
 
 #about #txt-content{
