@@ -64,3 +64,26 @@ for (let i = 0; i < projectTiles.length; i++){
     projectTiles[i].addEventListener("mouseleave", reset);
 }
 
+let blueChange = () => {
+    let arrow = document.getElementById("scroll-one").children[0];
+    let scrollText = document.getElementById("scroll-two").children[0];
+    
+    arrow.style.color = "#2A80C0";
+    scrollText.style.color = "#2A80C0";
+}
+
+let whiteChange = () => {
+    let arrow = document.getElementById("scroll-one").children[0];
+    let scrollText = document.getElementById("scroll-two").children[0];
+    
+    arrow.style.color = "#FFFFFF";
+    scrollText.style.color = "#FFFFFF";
+}
+
+
+let scrollDiv = document.getElementById("scroll")
+scrollDiv.addEventListener("mouseenter", blueChange)
+scrollDiv.addEventListener("mouseleave", whiteChange)
+
+
+
