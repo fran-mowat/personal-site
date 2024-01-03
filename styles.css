@@ -217,12 +217,23 @@ body{
     border-width: thin;
     border-radius: 3px;
     padding-inline: 6px;
+    padding-bottom: 9px;
 }
 
 #projects .project-tile button:hover{
     border: solid black;
     background-color: #E5E5E5;
     border-width: thin;
+}
+
+#projects .project-tile button img{
+    height: 20px;
+    transform: translate(0px, 4px);
+}
+
+#projects .project-tile button p{
+    display: inline;
+    margin: 0px;
 }
 
 #projects .project-tile .language-title{
