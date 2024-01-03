@@ -165,16 +165,16 @@ body{
 #about button{
     background-color: #2A80C0;
     border-radius: 5px;
-    border: solid #2A80C0;
-    padding: 10px;
+    font-size: 15px;
+    border: none;
+    padding: 12px;
     box-shadow: none;
     display: block;
     margin: auto;
 }
 
 #about button:hover{
-    background-color: transparent;
-    border-color: white;
+    background-color: #2f8dd4;
 }
 
 #about button a{
