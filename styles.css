@@ -35,6 +35,22 @@ body{
     text-decoration: none;
 }
 
+#menu .top{
+    color: #FFFFFF;
+}
+
+#menu .top:hover{
+    color: #b9b9b9;
+}
+
+#menu .offset{
+    color: #000000;
+}
+
+#menu .offset:hover{
+    color: #2A80C0;
+}
+
 #home{
     background-color: #050535;
     font-size: 20px;
