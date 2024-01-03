@@ -86,7 +86,7 @@ body{
 #home #scroll #scroll-one p{
     text-align: right;
     width: 100px;
-    animation: bounce 1.5s ease infinite;
+    animation: bounce 1s ease infinite;
     text-align: right;
     margin-right: 3px;
 }
@@ -101,14 +101,13 @@ body{
 }
 
 @keyframes bounce {
-    0%{
-        transform: translateY(-20%);
+    0%, 100%{
+        transform: translateY(-10%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
     50%{
-        transform: translateY(0%);
-    }
-    100%{
-        transform: translateY(-20%);
+        transform: translateY(5%);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
 
