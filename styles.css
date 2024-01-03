@@ -163,8 +163,8 @@ body{
     width: 300px;
     border-radius: 50%;
     padding: 5px;
-    background: conic-gradient(rgb(42, 128, 192, 0.2) 0deg, rgb(42, 128, 192, 0.2) 90deg, #2A80C0 100deg, #2A80C0 105deg, rgb(42, 128, 192, 0.2) 115deg);
-    animation: rotation 30s linear infinite ;
+    background: conic-gradient(rgb(42, 128, 192, 0.2) 0deg, rgb(42, 128, 192, 0.2) 90deg, #2A80C0 100deg, #2A80C0 110deg, rgb(42, 128, 192, 0.2) 120deg, rgb(42, 128, 192, 0.2) 270deg, #2A80C0 280deg, #2A80C0 290deg, rgb(42, 128, 192, 0.2) 300deg);
+    animation: rotation 10s linear infinite ;
 }
 
 @keyframes rotation {
