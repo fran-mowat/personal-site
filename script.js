@@ -17,12 +17,12 @@ let checkScroll = () => {
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
         navBar.style.backgroundColor = "rgb(255, 255, 255, 0.7)";
         for (let i = 0; i < navBar.children.length; i++){
-            navBar.children[i].style.color = "black";
+            navBar.children[i].classList = "offset";
         }
     } else {
         navBar.style.backgroundColor = "rgb(0, 0, 0, 0)";
         for (let i = 0; i < navBar.children.length; i++){
-            navBar.children[i].style.color = "white";
+            navBar.children[i].classList = "top";
         }
     }
 }
