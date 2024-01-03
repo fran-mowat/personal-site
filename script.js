@@ -48,7 +48,7 @@ VANTA.GLOBE({
   })
 
 let nudge = (e) => {
-    e.target.style.boxShadow = "5px 5px 5px #5B5B5B";
+    e.target.style.boxShadow = "5px 5px 5px #2A80C0";
     e.target.style.transform = "translate(0, -2px)";
 }
 
