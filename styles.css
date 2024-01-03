@@ -142,19 +142,37 @@ body{
     height: 300px;
     width: 300px;
     flex: 0.7;
+    position: relative;
 }
 
 #about img{
     height: 300px;
     border-radius: 50%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #about #border-spin{
+    z-index: 1;
+    position: absolute;
+    top: -5px;
+    left: -5px;
     height: 300px;
     width: 300px;
     border-radius: 50%;
     padding: 5px;
     background: conic-gradient(rgb(42, 128, 192, 0.2) 0deg, rgb(42, 128, 192, 0.2) 90deg, #2A80C0 100deg, #2A80C0 105deg, rgb(42, 128, 192, 0.2) 115deg);
+    animation: rotation 30s linear infinite ;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(-360deg);
+    } to{
+        transform: rotate(360deg);
+    }
 }
 
 #about #txt-content{
