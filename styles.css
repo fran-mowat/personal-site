@@ -294,16 +294,16 @@ body{
     background-color: #F0ECEC;
 }
 
-#skills{
+#experiences{
     background-color: #0D2256;
     background-image: url("./images/navy-background.png");
 }
 
-#skills h1{
+#experiences h1{
     margin-bottom: 50px;
 }
 
-#skills #skills-container{
+#experiences #experiences-container{
     display: flex;
     margin: auto;
     overflow-x: auto;
@@ -312,11 +312,11 @@ body{
     scrollbar-width: none; /* disable scroll bar for firefox */
 }
 
-#skills-container::-webkit-scrollbar{
+#experiences-container::-webkit-scrollbar{
     display: none; /* disable scroll bar for chrome, safari and opera */
 }
 
-#skills .skills-tile{
+#experiences .experiences-tile{
     flex: 0 0 auto;
     margin: 20px;
     background-color: white;
@@ -325,7 +325,7 @@ body{
     height: 200px;
 }
 
-#skills .skills-tile p, #skills .skills-tile h1{
+#experiences .experiences-tile p, #experiences .experiences-tile h1{
     color: black;
 }
 
