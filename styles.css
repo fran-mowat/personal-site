@@ -292,6 +292,8 @@ body{
     font-size: 13px;
     font-family: monospace;
     background-color: #F0ECEC;
+    margin-left: 3px;
+    margin-right: 3px;
 }
 
 #experiences{
