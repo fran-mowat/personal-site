@@ -83,6 +83,10 @@ body{
     height: 50px;
 }
 
+#home #links img:hover{
+    filter: brightness(0.7);
+}
+
 #home #scroll{
     margin-top: 170px;
     font-size: 17px;
