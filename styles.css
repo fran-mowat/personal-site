@@ -299,10 +299,11 @@ body{
 #experiences{
     background-color: #0D2256;
     background-image: url("./images/navy-background.png");
+    height: 400px;
 }
 
 #experiences h1{
-    margin-bottom: 50px;
+    margin-bottom: 35px;
 }
 
 #experiences #experiences-container{
@@ -312,6 +313,9 @@ body{
     flex-wrap: nowrap;
     -ms-overflow-style: none; /* disable scroll bar for IE and edge */ 
     scrollbar-width: none; /* disable scroll bar for firefox */
+    position: absolute;
+    height: 350px;
+    width: 100%;
 }
 
 #experiences-container::-webkit-scrollbar{
@@ -320,13 +324,44 @@ body{
 
 #experiences .experiences-tile{
     flex: 0 0 auto;
-    margin: 20px;
     background-color: rgb(13, 34, 86, 0.95);
     border: 1px solid #E5E5E5;
     display: inline-block;
     width: 180px;
     height: 200px;
     border-radius: 5px;
+    position: absolute;
+    top: 1rem;
+}
+
+#experiences .one{
+    left: 0rem;
+}
+
+#experiences .two{
+    left: 13rem;
+}
+
+#experiences .three{
+    left: 26rem;
+}
+
+#experiences .four{
+    left: 39rem;
+}
+
+#experiences .five{
+    left: 52rem;
+}
+
+#experiences .experiences-tile:hover{
+    width: 300px;
+    height: 300px;
+    top: 0rem;
+    right: -1rem;
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(13, 34, 86, 1);
 }
 
 #experiences .experiences-tile h1{
