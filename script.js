@@ -91,10 +91,18 @@ let whiteChange = () => {
     scrollText.style.color = "#FFFFFF";
 }
 
-
 let scrollDiv = document.getElementById("scroll")
 scrollDiv.addEventListener("mouseenter", blueChange)
 scrollDiv.addEventListener("mouseleave", whiteChange)
 
+let setGrey = () => {
+    document.getElementById("email-address").style.opacity = 0.7;
+}
 
+let setWhite = () => {
+    document.getElementById("email-address").style.opacity = 1;
+}
 
+let emailHover = document.getElementById("email");
+emailHover.addEventListener("mouseenter", setGrey)
+emailHover.addEventListener("mouseleave", setWhite)
