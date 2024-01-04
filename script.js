@@ -16,13 +16,13 @@ let checkScroll = () => {
 
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
         navBar.style.backgroundColor = "rgb(255, 255, 255, 0.7)";
-        for (let i = 0; i < navBar.children.length; i++){
-            navBar.children[i].classList = "offset";
+        for (let i = 1; i < navBar.children.length; i++){ //start from 1 to avoid logo div
+            navBar.children[i].firstChild.firstChild.classList = "offset";
         }
     } else {
         navBar.style.backgroundColor = "rgb(0, 0, 0, 0)";
-        for (let i = 0; i < navBar.children.length; i++){
-            navBar.children[i].classList = "top";
+        for (let i = 1; i < navBar.children.length; i++){
+            navBar.children[i].firstChild.firstChild.classList = "top";
         }
     }
 }
