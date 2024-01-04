@@ -53,10 +53,15 @@ body{
 
 #menu .offset{
     color: #000000;
+    background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+    display: inline-block;
+    transition: background-size 0.5s;
+    padding: 0.1em 0;
 }
 
 #menu .offset:hover{
-    color: #2A80C0;
+    --underline-width: 100%;
+    color: #000000;
 }
 
 #home{
