@@ -67,6 +67,14 @@ for (let i = 0; i < projectTiles.length; i++){
     projectTiles[i].addEventListener("mouseleave", reset);
 }
 
+let experienceTiles = document.getElementsByClassName("experiences-tile");
+
+for (let i = 0; i < experienceTiles.length; i++){
+    experienceTiles[i].addEventListener("mouseenter", nudge);
+    experienceTiles[i].addEventListener("mouseleave", reset);
+}
+
+
 let blueChange = () => {
     let arrow = document.getElementById("scroll-one").children[0];
     let scrollText = document.getElementById("scroll-two").children[0];
