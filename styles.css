@@ -398,6 +398,11 @@ body{
 
 #contact{
     background-color: #050535;
+    padding: 55px;
+}
+
+#contact p{
+    font-size: 20px;
 }
 
 #contact #email{
@@ -409,7 +414,11 @@ body{
 }
 
 #contact #email:hover{
-    background-color: #2f8dd4;
+    background-image: url("./images/copy-logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 67px;
+    opacity: 0.7;
 }
 
 #contact #email div{
@@ -422,7 +431,7 @@ body{
 
 #contact #email p{
     text-align: left;
-    padding: 20px;
+    padding: 16px;
     flex: 1;
 }
 
