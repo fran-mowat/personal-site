@@ -435,6 +435,10 @@ body{
     flex: 1;
 }
 
+#contact #email-address{
+    display: flex;
+}
+
 #bottom{
     background-color: #0D2256;
     padding: 10px;
