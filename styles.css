@@ -323,6 +323,7 @@ body{
     background-color: #0D2256;
     background-image: url("./images/navy-background.png");
     height: 400px;
+    padding: 55px 86px 80px;
 }
 
 #experiences h1{
@@ -332,13 +333,9 @@ body{
 #experiences #experiences-container{
     display: flex;
     margin: auto;
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    -ms-overflow-style: none; /* disable scroll bar for IE and edge */ 
-    scrollbar-width: none; /* disable scroll bar for firefox */
     position: absolute;
     height: 350px;
-    width: 100%;
+    width: 1045px;
 }
 
 #experiences-container::-webkit-scrollbar{
@@ -350,41 +347,11 @@ body{
     background-color: rgb(13, 34, 86, 0.95);
     border: 1px solid #E5E5E5;
     display: inline-block;
-    width: 180px;
+    width: 170px;
     height: 200px;
     border-radius: 5px;
     position: absolute;
     top: 1rem;
-}
-
-#experiences .one{
-    left: 0rem;
-}
-
-#experiences .two{
-    left: 13rem;
-}
-
-#experiences .three{
-    left: 26rem;
-}
-
-#experiences .four{
-    left: 39rem;
-}
-
-#experiences .five{
-    left: 52rem;
-}
-
-#experiences .experiences-tile:hover{
-    width: 300px;
-    height: 300px;
-    top: 0rem;
-    right: -1rem;
-    position: absolute;
-    z-index: 100;
-    background-color: rgb(13, 34, 86, 1);
 }
 
 #experiences .experiences-tile h1{
@@ -394,6 +361,96 @@ body{
 
 #experiences .experiences-tile img{
     width: 100px;
+}
+
+#experiences .one{
+    left: 3rem;
+}
+
+#experiences .one:hover{
+    left: 0rem;
+}
+
+#experiences .one img{
+    width: 122px;
+}
+
+#experiences .one h1{
+    margin-bottom: 5px;
+}
+
+#experiences .two{
+    left: 15rem;
+}
+
+#experiences .two:hover{
+    left: 12rem;
+}
+
+#experiences .two img{
+    width: 130px;
+}
+
+#experiences .two h1{
+    margin-bottom: 20px;
+}
+
+#experiences .three{
+    left: 27rem;
+}
+
+#experiences .three:hover{
+    left: 24rem;
+}
+
+#experiences .three #first{
+    width: 120px;
+}
+
+#experiences .three #second{
+    width: 122px;
+    margin-top: 5px;
+}
+
+#experiences .three h1{
+    margin-bottom: 0px;
+}
+
+#experiences .four{
+    left: 39rem;
+}
+
+#experiences .four:hover{
+    left: 36rem;
+}
+
+#experiences .four img{
+    width: 170px;
+}
+
+#experiences .four h1{
+    margin-bottom: 30px;
+}
+
+#experiences .five{
+    left: 51rem;
+}
+
+#experiences .five:hover{
+    left: 48rem;
+}
+
+#experiences .five h1{
+    margin-bottom: 23px;
+}
+
+#experiences .experiences-tile:hover{
+    width: 275px;
+    height: 300px;
+    top: 0rem;
+    position: absolute;
+    z-index: 100;
+    background-color: rgb(13, 34, 86, 1);
 }
 
 #contact{
