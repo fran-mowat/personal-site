@@ -402,7 +402,7 @@ body{
 }
 
 #contact p{
-    font-size: 20px;
+    font-size: 17px;
 }
 
 #contact #email{
@@ -431,7 +431,7 @@ body{
 
 #contact #email p{
     text-align: left;
-    padding: 16px;
+    padding: 21px;
     flex: 1;
 }
 
