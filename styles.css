@@ -32,6 +32,16 @@ body{
     flex: 1;
 }
 
+#menu img{
+    height: 30px;
+    margin-top: 12px;
+    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
+}
+
+#menu img:hover{
+    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(75%) contrast(85%);
+}
+
 #menu p, #menu a{
     margin-top: 16px;
     margin-bottom: 16px;
