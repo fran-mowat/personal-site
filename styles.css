@@ -28,8 +28,11 @@ body{
     right: 0;
 }
 
-#menu p, #menu a{
+#menu div{
     flex: 1;
+}
+
+#menu p, #menu a{
     margin-top: 16px;
     margin-bottom: 16px;
     text-decoration: none;
@@ -37,9 +40,14 @@ body{
 
 #menu .top{
     color: #FFFFFF;
+    background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+    display: inline-block;
+    transition: background-size 0.5s;
+    padding: 0.1em 0;
 }
 
 #menu .top:hover{
+    --underline-width: 100%;
     color: #b9b9b9;
 }
 
