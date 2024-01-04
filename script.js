@@ -28,7 +28,10 @@ let checkScroll = () => {
 }
 
 let copyEmail = () => {
+    let snackbar = document.getElementById("snackbar")
     navigator.clipboard.writeText("franmowat33@gmail.com");
+    snackbar.className = "show";
+    setTimeout(function(){snackbar.className = snackbar.className.replace("show", ""); }, 3000)
 }
 
 window.onscroll = function() {checkScroll()};
