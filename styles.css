@@ -495,7 +495,7 @@ body{
     border-radius: 10px;
     margin: 40px;
     display: flex;
-    transition: background-color 1s;
+    transition: background-color 0.5s;
     background-position: right;
 }
 
@@ -512,13 +512,32 @@ body{
 }
 
 #contact #email img{
-    height: 100px;
+    display: none;
+}
+
+#contact #email #email-holder{
+    display: none;
 }
 
 #contact #email p{
-    text-align: left;
+    text-align: center;
     padding: 21px;
     flex: 1;
+}
+
+@media screen and (min-width: 550px){
+    #contact #email img{
+        display: inline;
+        height: 100px;
+    }
+
+    #contact #email #email-holder{
+        display: block;
+    }
+
+    #contact #email p{
+        text-align: left;
+    }
 }
 
 #contact #email-address{
