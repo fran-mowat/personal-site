@@ -487,6 +487,9 @@ body{
 
 #contact p{
     font-size: 17px;
+    max-width: 740px;
+    margin: auto;
+    line-height: 2em;
 }
 
 #contact #email{
