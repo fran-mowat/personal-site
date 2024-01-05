@@ -105,16 +105,21 @@ let removeMenu = () => {
     let mobileMenu = document.getElementById("mobile-menu");
     mobileMenu.style.backgroundColor = "";
 
+    document.body.removeEventListener("click", removeMenu);
+    mobileMenu.addEventListener("click", menuDisplay);
 }
 
-let menuDisplay = () => {
+let menuDisplay = (e) => {
+    e.stopPropagation();
+    
     let dropdownContent = document.getElementById("dropdown-content");
     dropdownContent.style.display = "block";
 
     let mobileMenu = document.getElementById("mobile-menu");
     mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
 
-    dropdownContent.addEventListener("click", removeMenu);
+    mobileMenu.removeEventListener("click", menuDisplay);
+    document.body.addEventListener("click", removeMenu);
 }
 
 let mobileMenu = document.getElementById("dropdown-button");
