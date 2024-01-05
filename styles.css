@@ -496,10 +496,18 @@ body{
     border-radius: 50%;
     font-size: 20px;
     font-family: none;
+
+    background-size: 200% 200%;
+    transition: background-position 0.5s, color 0.5s, border 0.5s;
+    background-position: top;
+    background-image: linear-gradient(#2A80C0 50%, white 50%);
+    border: 1.5px solid #2A80C0; 
 }
 
 #scroll-to-top:hover{
-    background-color: #2f8dd4;
+    background-position: bottom;
+    color: #2A80C0;
+    border: 1.5px solid #2A80C0; 
 }
 
 #snackbar{
