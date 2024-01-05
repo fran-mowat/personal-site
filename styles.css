@@ -167,6 +167,14 @@ body{
     display: none;
 }
 
+#about #small-image-container{
+    display: block;
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+}
+
 @media screen and (min-width: 1200px){
     #about{
         display: flex;
@@ -180,6 +188,10 @@ body{
         width: 300px;
         flex: 0.7;
         position: relative;
+    }
+
+    #about #small-image-container{
+        display: none;
     }
 }
 
