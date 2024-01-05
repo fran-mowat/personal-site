@@ -18,61 +18,121 @@ body{
 }
 
 #menu{
-    background-color: rgba(255, 255, 255, 0);
-    z-index: 1000;
-    display: flex;
-    padding: 10px;
+   display: none;
+}
+
+#mobile-menu{
     position: fixed;
+    z-index: 1000;
+    padding: 10px;
     top: 0;
-    left: 0;
     right: 0;
+    left: 0;
 }
 
-#menu div{
-    flex: 1;
-}
-
-#menu img{
+#mobile-menu img{
+    display: inline;
     height: 30px;
-    margin-top: 12px;
+    margin: 12px;
+}
+
+#mobile-menu #logo{
     filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
     transition: filter 0.5s;
+    float: left;
 }
 
-#menu img:hover{
+#mobile-menu img:hover{
     filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(75%) contrast(85%);
 }
 
-#menu p, #menu a{
-    margin-top: 16px;
-    margin-bottom: 16px;
+#mobile-menu #dropdown-button{
+    float: right;
+}
+
+#mobile-menu #dropdown #dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    min-width: 160px;
+    z-index: 1;
+    right: 0;
+    left: 0;
+}
+
+#mobile-menu #dropdown #dropdown-content a{
+    color: black;
+    padding: 12px;
     text-decoration: none;
+    display: block;
 }
 
-#menu .top{
-    color: #FFFFFF;
-    background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
-    display: inline-block;
-    transition: background-size 0.5s;
-    padding: 0.1em 0;
+#mobile-menu #dropdown:hover #dropdown-content{
+    display: block;
 }
 
-#menu .top:hover{
-    --underline-width: 100%;
-    color: #b9b9b9;
-}
+@media screen and (min-width: 768px){
+    #mobile-menu{
+        display: none;
+    }
 
-#menu .offset{
-    color: #000000;
-    background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
-    display: inline-block;
-    transition: background-size 0.5s;
-    padding: 0.1em 0;
-}
+    #menu{
+        background-color: rgba(255, 255, 255, 0);
+        z-index: 1000;
+        display: flex;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 
-#menu .offset:hover{
-    --underline-width: 100%;
-    color: #000000;
+    #menu div{
+        flex: 1;
+    }
+
+    #menu img{
+        height: 30px;
+        margin-top: 12px;
+        filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
+        transition: filter 0.5s;
+    }
+    
+    #menu img:hover{
+        filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(75%) contrast(85%);
+    }
+    
+    #menu p, #menu a{
+        margin-top: 16px;
+        margin-bottom: 16px;
+        text-decoration: none;
+    }
+    
+    #menu .top{
+        color: #FFFFFF;
+        background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+        display: inline-block;
+        transition: background-size 0.5s;
+        padding: 0.1em 0;
+    }
+    
+    #menu .top:hover{
+        --underline-width: 100%;
+        color: #b9b9b9;
+    }
+    
+    #menu .offset{
+        color: #000000;
+        background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+        display: inline-block;
+        transition: background-size 0.5s;
+        padding: 0.1em 0;
+    }
+    
+    #menu .offset:hover{
+        --underline-width: 100%;
+        color: #000000;
+    }
 }
 
 #home{
