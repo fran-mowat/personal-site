@@ -8,7 +8,7 @@ let checkScroll = () => {
     let scrollButton = document.getElementById("scroll-to-top");
     let navBar = document.getElementById("menu");
 
-    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450){
+    if ((document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) && document.documentElement.clientWidth >= 768){
         scrollButton.style.display = "block";
     } else {
         scrollButton.style.display = "none";
