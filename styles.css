@@ -378,7 +378,6 @@ body{
 #experiences{
     background-color: #0D2256;
     background-image: url("./images/navy-background.png");
-    height: 370px;
     padding: 80px 86px 20px;
 }
 
@@ -466,8 +465,7 @@ body{
 
 #experiences p{
     padding: 5px;
-    margin: auto;
-    margin-top: 25px;
+    margin: 25px auto;
     width: 500px;
     border-radius: 5px;
     border: 1px solid #e5e5e5;
