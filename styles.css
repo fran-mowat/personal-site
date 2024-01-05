@@ -167,7 +167,7 @@ body{
     display: none;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1200px){
     #about{
         display: flex;
         align-items: center;
@@ -175,14 +175,13 @@ body{
     }
 
     #about #image-container{
+        display: block;
         height: 300px;
         width: 300px;
         flex: 0.7;
         position: relative;
     }
 }
-
-
 
 #about img{
     height: 300px;
