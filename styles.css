@@ -447,7 +447,7 @@ body{
     border-radius: 10px;
     margin: 40px;
     display: flex;
-    transition: background-position 1s;
+    transition: background-color 1s;
     background-position: right;
 }
 
@@ -496,7 +496,6 @@ body{
     border-radius: 50%;
     font-size: 20px;
     font-family: none;
-
     background-size: 200% 200%;
     transition: background-position 0.5s, color 0.5s, border 0.5s;
     background-position: top;
