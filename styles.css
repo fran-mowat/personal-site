@@ -25,6 +25,7 @@ body{
     position: fixed;
     z-index: 1000;
     padding: 10px;
+    padding-bottom: 0px;
     top: 0;
     right: 0;
     left: 0;
@@ -59,7 +60,7 @@ body{
 #mobile-menu #dropdown-content{
     display: none;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     min-width: 160px;
     z-index: 1;
     right: 0;
@@ -74,11 +75,7 @@ body{
 }
 
 #mobile-menu #dropdown-content a:hover{
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-#mobile-menu #dropdown:hover #dropdown-content{
-    display: block;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 @media screen and (min-width: 768px){
