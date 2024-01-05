@@ -282,21 +282,41 @@ body{
 }
 
 #projects #project-container{
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: 25px;
+    display: block;
     margin: auto;
 }
 
 #projects .project-tile{
-    margin: auto;
+    margin: 25px auto;
     background-color: white;
-    width: 520px;
     border-radius: 5px;
     padding: 10px;
     position: relative;
     top: 0;
+    max-width: 520px;
     transition: top ease 0.2s;
+}
+
+@media screen and (min-width: 992px){
+    #projects #project-container{
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 25px;
+    }
+
+    #projects .project-tile{
+        margin: auto;
+    }
+
+    #projects .project-tile p{
+        height: 64px;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    #projects .project-tile p{
+        height: auto;
+    }
 }
 
 #projects .project-tile:hover{
