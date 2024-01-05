@@ -269,7 +269,7 @@ body{
     padding: 10px;
     position: relative;
     top: 0;
-    transition: top ease 0.5s;
+    transition: top ease 0.2s;
 }
 
 #projects .project-tile:hover{
@@ -354,7 +354,7 @@ body{
     border-radius: 5px;
     position: relative;
     top: 0;
-    transition: top ease 0.5s;
+    transition: top ease 0.2s;
 }
 
 #experiences .experiences-tile a{
