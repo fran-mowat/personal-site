@@ -106,3 +106,5 @@ let setWhite = () => {
 let emailHover = document.getElementById("email");
 emailHover.addEventListener("mouseenter", setGrey)
 emailHover.addEventListener("mouseleave", setWhite)
+
+scrollCue.init();
