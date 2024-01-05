@@ -101,11 +101,18 @@ resume.addEventListener("mouseleave", revertButton);
 let removeMenu = () => {
     let dropdownContent = document.getElementById("dropdown-content");
     dropdownContent.style.display = "none";
+
+    let mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.style.backgroundColor = "";
+
 }
 
 let menuDisplay = () => {
     let dropdownContent = document.getElementById("dropdown-content");
     dropdownContent.style.display = "block";
+
+    let mobileMenu = document.getElementById("mobile-menu");
+    mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.7)";
 
     dropdownContent.addEventListener("click", removeMenu);
 }
