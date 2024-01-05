@@ -36,7 +36,7 @@ body{
     height: 30px;
     margin-top: 12px;
     filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
-    transition: filter 1s;
+    transition: filter 0.5s;
 }
 
 #menu img:hover{
@@ -105,6 +105,7 @@ body{
 
 #home #links img{
     height: 50px;
+    transition: filter 0.5s;
 }
 
 #home #links img:hover{
@@ -133,11 +134,13 @@ body{
     animation: bounce 1s ease infinite;
     text-align: right;
     margin-right: 3px;
+    transition: color 0.5s;
 }
 
 #home #scroll #scroll-two p{
     text-align: center;
     width: max-content;
+    transition: color 0.5s;
 }
 
 #home #scroll #scroll-three p{
