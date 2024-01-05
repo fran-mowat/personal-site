@@ -267,6 +267,14 @@ body{
     width: 520px;
     border-radius: 5px;
     padding: 10px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+}
+
+#projects .project-tile:hover{
+    top: -6px;
+    box-shadow: 5px 5px 5px #2A80C0;
 }
 
 #projects .project-tile p, #projects .project-tile h1, #projects .project-tile button, #projects .project-tile span{
@@ -344,6 +352,9 @@ body{
     width: 170px;
     height: 200px;
     border-radius: 5px;
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
 }
 
 #experiences .experiences-tile a{
@@ -402,6 +413,8 @@ body{
 
 #experiences .experiences-tile:hover{
     background-color: rgb(13, 34, 86, 1);
+    top: -8px;
+    box-shadow: 5px 5px 5px #2A80C0;
 }
 
 #experiences p{
