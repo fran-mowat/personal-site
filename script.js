@@ -98,4 +98,17 @@ let resume = document.getElementById("resume-button");
 resume.addEventListener("mouseenter", changeButton);
 resume.addEventListener("mouseleave", revertButton);
 
+let removeMenu = () => {
+    let dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.style.display = "none";
+}
 
+let menuDisplay = () => {
+    let dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.style.display = "block";
+
+    dropdownContent.addEventListener("click", removeMenu);
+}
+
+let mobileMenu = document.getElementById("dropdown-button");
+mobileMenu.addEventListener("click", menuDisplay);
