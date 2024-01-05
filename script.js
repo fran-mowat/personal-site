@@ -50,31 +50,6 @@ VANTA.GLOBE({
     backgroundColor: 0x50535
   })
 
-let nudge = (e) => {
-    e.target.style.boxShadow = "5px 5px 5px #2A80C0";
-    e.target.style.transform = "translate(0, -2px)";
-}
-
-let reset = (e) => {
-    e.target.style.boxShadow = "none";
-    e.target.style.transform = "translate(0, 2px)";
-}
-
-let projectTiles = document.getElementsByClassName("project-tile");
-
-for (let i = 0; i < projectTiles.length; i++){
-    projectTiles[i].addEventListener("mouseenter", nudge);
-    projectTiles[i].addEventListener("mouseleave", reset);
-}
-
-let experienceTiles = document.getElementsByClassName("experiences-tile");
-
-for (let i = 0; i < experienceTiles.length; i++){
-    experienceTiles[i].addEventListener("mouseenter", nudge);
-    experienceTiles[i].addEventListener("mouseleave", reset);
-}
-
-
 let blueChange = () => {
     let arrow = document.getElementById("scroll-one").children[0];
     let scrollText = document.getElementById("scroll-two").children[0];
