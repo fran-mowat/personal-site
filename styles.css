@@ -447,6 +447,8 @@ body{
     border-radius: 10px;
     margin: 40px;
     display: flex;
+    transition: background-position 1s;
+    background-position: right;
 }
 
 #contact #email:hover{
