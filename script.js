@@ -83,3 +83,19 @@ emailHover.addEventListener("mouseenter", setGrey)
 emailHover.addEventListener("mouseleave", setWhite)
 
 scrollCue.init();
+
+let changeButton = () => {
+    resume.style.backgroundPosition = "left";
+    resume.children[0].style.color = "#2A80C0";
+}
+
+let revertButton = () => {
+    resume.style.backgroundPosition = "right";
+    resume.children[0].style.color = "white";
+}
+
+let resume = document.getElementById("resume-button");
+resume.addEventListener("mouseenter", changeButton);
+resume.addEventListener("mouseleave", revertButton);
+
+
