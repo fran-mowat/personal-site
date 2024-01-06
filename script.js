@@ -106,7 +106,9 @@ let removeMenu = () => {
     mobileMenu.style.backgroundColor = "";
 
     document.body.removeEventListener("click", removeMenu);
-    mobileMenu.addEventListener("click", menuDisplay);
+
+    let dropdownButton = document.getElementById("dropdown-button");
+    dropdownButton.addEventListener("click", menuDisplay);
 }
 
 let menuDisplay = (e) => {
@@ -122,5 +124,5 @@ let menuDisplay = (e) => {
     document.body.addEventListener("click", removeMenu);
 }
 
-let mobileMenu = document.getElementById("dropdown-button");
-mobileMenu.addEventListener("click", menuDisplay);
+let dropdownButton = document.getElementById("dropdown-button");
+dropdownButton.addEventListener("click", menuDisplay);
