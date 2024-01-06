@@ -211,10 +211,9 @@ body{
 }
 
 #home #scroll{
-    margin-top: 170px;
     font-size: 17px;
     display: inline-block;
-    margin: auto;
+    margin: 90px auto 0px;
 }
 
 #home #scroll a{
