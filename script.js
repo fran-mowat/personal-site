@@ -23,15 +23,17 @@ let checkScroll = () => {
             navBar.children[i].firstChild.firstChild.classList = "offset";
         }
 
-        mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
-        dropdownButton.classList.add("dropdown-button-click");
-
     } else {
         navBar.style.backgroundColor = "rgb(0, 0, 0, 0)";
         for (let i = 1; i < navBar.children.length; i++){
             navBar.children[i].firstChild.firstChild.classList = "top";
         }
+    }
 
+    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
+        mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        dropdownButton.classList.add("dropdown-button-click");
+    } else if (document.body.getAttribute("listener") == false || document.body.getAttribute("listener") == null){ //menu is not already clicked open
         mobileMenu.style.backgroundColor = "";
         dropdownButton.classList.remove("dropdown-button-click");
     }
@@ -115,6 +117,7 @@ let removeMenu = () => {
     let mobileMenu = document.getElementById("mobile-menu");
 
     document.body.removeEventListener("click", removeMenu);
+    document.body.setAttribute("listener", false);
 
     let dropdownButton = document.getElementById("dropdown-button");
     dropdownButton.addEventListener("click", menuDisplay);
@@ -139,6 +142,7 @@ let menuDisplay = (e) => {
     dropdownButton.removeEventListener("click", menuDisplay);
     
     document.body.addEventListener("click", removeMenu);
+    document.body.setAttribute("listener", true);
 }
 
 let dropdownButton = document.getElementById("dropdown-button");
