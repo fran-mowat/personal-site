@@ -91,6 +91,11 @@ body{
     background-color: rgba(255, 255, 255, 0.3);
 }
 
+#mobile-menu #dropdown-content div:hover .mobile-menu-items{
+    --underline-width: 100%;
+    color: #000000;
+}
+
 #mobile-menu #dropdown-content a{
     text-decoration: none;
 }
@@ -102,11 +107,6 @@ body{
     background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
     transition: background-size 0.5s;
     padding: 0.1em 0;
-}
-
-#mobile-menu .mobile-menu-items:hover{
-    --underline-width: 100%;
-    color: #000000;
 }
 
 @media screen and (min-width: 768px){
