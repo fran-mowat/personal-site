@@ -213,45 +213,31 @@ body{
 #home #scroll{
     margin-top: 170px;
     font-size: 17px;
+    display: inline-block;
+    margin: auto;
 }
 
 #home #scroll a{
-    display: flex;
-    justify-content: center;
     text-decoration: none;
 }
 
-#home #scroll div{
-    height: 30px;
-    flex: 0;
+#home #scroll p, #home #scroll #arrow-container{
+    display: inline;
 }
 
-#home #scroll #scroll-one span{
-    text-align: right;
-    width: 100px;
+#home #scroll #arrow-container img{
+    height: 20px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(283deg) brightness(106%) contrast(101%);
     animation: bounce 1s ease infinite;
-    text-align: right;
-    margin-right: 3px;
-    transition: color 0.5s;
-}
-
-#home #scroll #scroll-two p{
-    text-align: center;
-    width: max-content;
-    transition: color 0.5s;
-}
-
-#home #scroll #scroll-three p{
-    width: 100px;
 }
 
 @keyframes bounce {
     0%, 100%{
-        transform: translateY(30%);
+        transform: translateY(10%);
         animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
     50%{
-        transform: translateY(50%);
+        transform: translateY(30%);
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
