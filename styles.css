@@ -49,12 +49,17 @@ body{
     float: left;
 }
 
+#mobile-menu #logo:hover{
+    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(75%) contrast(85%);
+}
+
 #mobile-menu #dropdown-button{
+    transition: filter 0.5s;
     float: right;
 }
 
-#mobile-menu img:hover{
-    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(75%) contrast(85%);
+#mobile-menu #dropdown-button:hover{
+    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
 }
 
 #mobile-menu #dropdown-content{
