@@ -7,6 +7,8 @@ let scrollToTop = () => {
 let checkScroll = () => {
     let scrollButton = document.getElementById("scroll-to-top");
     let navBar = document.getElementById("menu");
+    let mobileMenu = document.getElementById("mobile-menu");
+    let dropdownButton = document.getElementById("dropdown-button");
 
     if ((document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) && document.documentElement.clientWidth >= 768){
         scrollButton.style.display = "block";
@@ -16,14 +18,22 @@ let checkScroll = () => {
 
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
         navBar.style.backgroundColor = "rgb(255, 255, 255, 0.7)";
+
         for (let i = 1; i < navBar.children.length; i++){ //start from 1 to avoid logo div
             navBar.children[i].firstChild.firstChild.classList = "offset";
         }
+
+        mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        dropdownButton.classList.add("dropdown-button-click");
+
     } else {
         navBar.style.backgroundColor = "rgb(0, 0, 0, 0)";
         for (let i = 1; i < navBar.children.length; i++){
             navBar.children[i].firstChild.firstChild.classList = "top";
         }
+
+        mobileMenu.style.backgroundColor = "";
+        dropdownButton.classList.remove("dropdown-button-click");
     }
 }
 
@@ -103,13 +113,16 @@ let removeMenu = () => {
     dropdownContent.style.display = "none";
 
     let mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu.style.backgroundColor = "";
 
     document.body.removeEventListener("click", removeMenu);
 
     let dropdownButton = document.getElementById("dropdown-button");
-    dropdownButton.classList.remove("dropdown-button-click");
     dropdownButton.addEventListener("click", menuDisplay);
+
+    if (! (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40)){
+        dropdownButton.classList.remove("dropdown-button-click");
+        mobileMenu.style.backgroundColor = "";
+    }
 }
 
 let menuDisplay = (e) => {
