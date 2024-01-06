@@ -31,7 +31,7 @@ let checkScroll = () => {
     }
 
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
-        mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+        mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
         dropdownButton.classList.add("dropdown-button-click");
     } else if (document.body.getAttribute("listener") == false || document.body.getAttribute("listener") == null){ //menu is not already clicked open
         mobileMenu.style.backgroundColor = "";
@@ -135,7 +135,7 @@ let menuDisplay = (e) => {
     dropdownContent.style.display = "block";
 
     let mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
+    mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
 
     let dropdownButton = document.getElementById("dropdown-button");
     dropdownButton.classList.add("dropdown-button-click");
