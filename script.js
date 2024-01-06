@@ -108,7 +108,7 @@ let removeMenu = () => {
     document.body.removeEventListener("click", removeMenu);
 
     let dropdownButton = document.getElementById("dropdown-button");
-    dropdownButton.style.filter = ""
+    dropdownButton.classList.remove("dropdown-button-click");
     dropdownButton.addEventListener("click", menuDisplay);
 }
 
@@ -122,7 +122,7 @@ let menuDisplay = (e) => {
     mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
 
     let dropdownButton = document.getElementById("dropdown-button");
-    dropdownButton.style.filter = "invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%)";
+    dropdownButton.classList.add("dropdown-button-click");
     dropdownButton.addEventListener("click", menuDisplay);
     
     document.body.addEventListener("click", removeMenu);
