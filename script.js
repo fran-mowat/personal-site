@@ -63,18 +63,18 @@ VANTA.GLOBE({
   })
 
 let blueChange = () => {
-    let arrow = document.getElementById("scroll-one").children[0];
-    let scrollText = document.getElementById("scroll-two").children[0];
+    let arrow = document.getElementById("arrow-container").children[0];
+    let scrollText = document.getElementById("scroll-text");
     
-    arrow.style.color = "#2A80C0";
+    arrow.style.filter = "invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%)";
     scrollText.style.color = "#2A80C0";
 }
 
 let whiteChange = () => {
-    let arrow = document.getElementById("scroll-one").children[0];
-    let scrollText = document.getElementById("scroll-two").children[0];
+    let arrow = document.getElementById("arrow-container").children[0];
+    let scrollText = document.getElementById("scroll-text");
     
-    arrow.style.color = "#FFFFFF";
+    arrow.style.filter = "invert(100%) sepia(100%) saturate(0%) hue-rotate(283deg) brightness(106%) contrast(101%)";
     scrollText.style.color = "#FFFFFF";
 }
 
