@@ -259,6 +259,8 @@ body{
 #about{
     background-color: #0D2256;
     display: block;
+    padding: 55px 5px;
+    overflow: hidden;
 }
 
 #about #image-container{
@@ -271,6 +273,13 @@ body{
     width: 300px;
     margin: auto;
     margin-top: 50px;
+}
+
+@media screen and (min-width: 500px){
+    #about{
+        padding: 55px;
+        padding-top: 80px;
+    }
 }
 
 @media screen and (min-width: 1200px){
