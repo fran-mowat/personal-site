@@ -123,7 +123,7 @@ let menuDisplay = (e) => {
 
     let dropdownButton = document.getElementById("dropdown-button");
     dropdownButton.classList.add("dropdown-button-click");
-    dropdownButton.addEventListener("click", menuDisplay);
+    dropdownButton.removeEventListener("click", menuDisplay);
     
     document.body.addEventListener("click", removeMenu);
 }
