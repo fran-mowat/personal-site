@@ -329,7 +329,12 @@ body{
 }
 
 #about p{
-    font-size: 18px;
+    font-size: 17px;
+}
+
+#about p a{
+    font-style: italic;
+    text-decoration: none;
 }
 
 #about button{
