@@ -516,6 +516,14 @@ body{
     width: 100px;
 }
 
+#experiences .zero img{
+    width: 150px;
+}
+
+#experiences .zero h1{
+    margin-bottom: 27px;
+}
+
 #experiences .one img{
     width: 122px;
 }
@@ -551,10 +559,6 @@ body{
 
 #experiences .four h1{
     margin-bottom: 30px;
-}
-
-#experiences .five h1{
-    margin-bottom: 23px;
 }
 
 #experiences .experiences-tile:hover{
