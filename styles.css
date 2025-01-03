@@ -6,6 +6,9 @@
     font-family: Segoe UI, Roboto, sans-serif;
     text-align: center;
     color: white;
+    --blue: #2A80C0;
+    --dark-blue: #0D2256;
+    --navy: #050535;
 }
 
 body{
@@ -93,7 +96,7 @@ body{
 
 #mobile-menu #dropdown-content div:hover .mobile-menu-items{
     --underline-width: 100%;
-    color: #000000;
+    color: black;
 }
 
 #mobile-menu #dropdown-content a{
@@ -104,7 +107,7 @@ body{
     color: black;
     width: fit-content;
     margin: auto;
-    background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+    background: linear-gradient(var(--blue) 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
     transition: background-size 0.5s;
     padding: 0.1em 0;
 }
@@ -147,8 +150,8 @@ body{
     }
     
     #menu .top{
-        color: #FFFFFF;
-        background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+        color: white;
+        background: linear-gradient(var(--blue) 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
         display: inline-block;
         transition: background-size 0.5s;
         padding: 0.1em 0;
@@ -160,8 +163,8 @@ body{
     }
     
     #menu .offset{
-        color: #000000;
-        background: linear-gradient(#2A80C0 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
+        color: black;
+        background: linear-gradient(var(--blue) 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
         display: inline-block;
         transition: background-size 0.5s;
         padding: 0.1em 0;
@@ -169,12 +172,12 @@ body{
     
     #menu .offset:hover{
         --underline-width: 100%;
-        color: #000000;
+        color: black;
     }
 }
 
 #home{
-    background-color: #050535;
+    background-color: var(--navy);
     font-size: 20px;
     padding: 30px;
 }
@@ -242,7 +245,7 @@ body{
 }
 
 #about{
-    background-color: #0D2256;
+    background-color: var(--dark-blue);
     display: block;
     padding: 55px 5px;
     overflow: hidden;
@@ -305,7 +308,7 @@ body{
     width: 300px;
     border-radius: 50%;
     padding: 5px;
-    background: conic-gradient(rgb(42, 128, 192, 0.2) 0deg, rgb(42, 128, 192, 0.2) 90deg, #2A80C0 100deg, #2A80C0 110deg, rgb(42, 128, 192, 0.2) 120deg, rgb(42, 128, 192, 0.2) 270deg, #2A80C0 280deg, #2A80C0 290deg, rgb(42, 128, 192, 0.2) 300deg);
+    background: conic-gradient(rgb(42, 128, 192, 0.2) 0deg, rgb(42, 128, 192, 0.2) 90deg, var(--blue) 100deg, var(--blue) 110deg, rgb(42, 128, 192, 0.2) 120deg, rgb(42, 128, 192, 0.2) 270deg, var(--blue) 280deg, var(--blue) 290deg, rgb(42, 128, 192, 0.2) 300deg);
     animation: rotation 10s linear infinite ;
 }
 
@@ -338,7 +341,7 @@ body{
 }
 
 #about button{
-    background-color: #2A80C0;
+    background-color: var(--blue);
     border-radius: 5px;
     font-size: 15px;
     border: none;
@@ -349,7 +352,7 @@ body{
     background-size: 200% 200%;
     transition: background-position 1s;
     background-position: right;
-    background-image: linear-gradient(to right, white 50%, #2A80C0 50%);
+    background-image: linear-gradient(to right, white 50%, var(--blue) 50%);
 }
 
 #about button a{
@@ -363,7 +366,7 @@ body{
 }
 
 #projects{
-    background-color: #050535;
+    background-color: var(--navy);
 }
 
 #projects h1{
@@ -375,7 +378,7 @@ body{
 }
 
 #projects a{
-    color: #2A80C0;
+    color: var(--blue);
 }
 
 #projects #project-container{
@@ -418,7 +421,7 @@ body{
 
 #projects .project-tile:hover{
     top: -6px;
-    box-shadow: 5px 5px 5px #2A80C0;
+    box-shadow: 5px 5px 5px var(--blue);
 }
 
 #projects .project-tile p, #projects .project-tile h1, #projects .project-tile button, #projects .project-tile span{
@@ -473,7 +476,7 @@ body{
 }
 
 #experiences{
-    background-color: #0D2256;
+    background-color: var(--dark-blue);
     background-image: url("./images/navy-background.png");
     padding: 80px 86px 20px;
 }
@@ -564,7 +567,7 @@ body{
 #experiences .experiences-tile:hover{
     background-color: rgb(13, 34, 86, 1);
     top: -8px;
-    box-shadow: 5px 5px 5px #2A80C0;
+    box-shadow: 5px 5px 5px var(--blue);
 }
 
 #experiences p{
@@ -578,11 +581,11 @@ body{
 }
 
 #experiences p a{
-    color: #2A80C0;
+    color: var(--blue);
 }
 
 #contact{
-    background-color: #050535;
+    background-color: var(--navy);
     padding: 55px;
 }
 
@@ -595,7 +598,7 @@ body{
 
 #contact #email{
     height: 100px;
-    background-color: #2A80C0;
+    background-color: var(--blue);
     border-radius: 10px;
     margin: 40px auto;
     display: flex;
@@ -649,7 +652,7 @@ body{
 }
 
 #bottom{
-    background-color: #0D2256;
+    background-color: var(--dark-blue);
     padding: 10px;
 }
 
@@ -665,7 +668,7 @@ body{
         right: 30px;
         z-index: 99;
         border: none;
-        background-color: #2A80C0;
+        background-color: var(--blue);
         padding-top: 6px;
         height: 40px;
         width: 40px;
@@ -675,14 +678,14 @@ body{
         background-size: 200% 200%;
         transition: background-position 0.5s, color 0.5s, border 0.5s;
         background-position: top;
-        background-image: linear-gradient(#2A80C0 50%, white 50%);
-        border: 1.5px solid #2A80C0; 
+        background-image: linear-gradient(var(--blue) 50%, white 50%);
+        border: 1.5px solid var(--blue); 
     }
 
     #scroll-to-top:hover{
         background-position: bottom;
-        color: #2A80C0;
-        border: 1.5px solid #2A80C0; 
+        color: var(--blue);
+        border: 1.5px solid var(--blue); 
     }
 }
 
