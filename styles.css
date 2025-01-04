@@ -326,7 +326,7 @@ body{
     margin-right: 20px;
 }
 
-#about h1, #about p, #about button{
+#about h1, #about p, #about #resume-button{
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -340,7 +340,7 @@ body{
     text-decoration: none;
 }
 
-#about button{
+#about #resume-button{
     background-color: var(--blue);
     border-radius: 5px;
     font-size: 15px;
@@ -353,11 +353,14 @@ body{
     transition: background-position 1s;
     background-position: right;
     background-image: linear-gradient(to right, white 50%, var(--blue) 50%);
+    text-decoration: none;
+    transition: color 1s, background-position 1s;
+    width: 250px;
 }
 
-#about button a{
-    text-decoration: none;
-    transition: color 1s;
+#about #resume-button:hover{
+    background-position: left;
+    color: var(--blue);
 }
 
 #about .start-end-div{
