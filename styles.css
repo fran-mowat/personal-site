@@ -299,7 +299,7 @@ body{
     left: 0;
 }
 
-#about #border-spin{
+#about .border-spin{
     z-index: 1;
     position: absolute;
     top: -5px;
