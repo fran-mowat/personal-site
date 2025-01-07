@@ -452,6 +452,11 @@ body{
     font-size: 15px;
 }
 
+.project-link.disabled{
+    cursor: not-allowed;
+    background-color: #b7b7b7;
+}
+
 #projects .project-tile a:hover{
     border: solid black;
     background-color: #E5E5E5;
