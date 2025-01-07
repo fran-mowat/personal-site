@@ -442,7 +442,7 @@ body{
 
 #projects .project-link{
     background-color: #F0ECEC;
-    border: solid grey;
+    border: 1px solid grey;
     border-width: thin;
     border-radius: 3px;
     padding: 2px 8px 7px 8px;
@@ -452,15 +452,16 @@ body{
     font-size: 15px;
 }
 
-.project-link.disabled{
-    cursor: not-allowed;
-    background-color: #b7b7b7;
-}
-
 #projects .project-tile a:hover{
     border: solid black;
     background-color: #E5E5E5;
     border-width: thin;
+}
+
+#projects .project-link.disabled, #projects .project-link.disabled:hover{
+    border: 1px solid grey;
+    cursor: not-allowed;
+    background-color: #b7b7b7;
 }
 
 #projects .project-tile a img{
