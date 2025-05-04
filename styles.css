@@ -400,7 +400,7 @@ body{
     transition: top ease 0.2s;
 }
 
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1200px){
     #projects #project-container{
         display: grid;
         grid-template-columns: auto auto;
@@ -452,13 +452,17 @@ body{
     font-size: 15px;
 }
 
+#projects .project-link.disabled{
+    cursor: not-allowed;
+}
+
 #projects .project-tile a:hover{
     border: solid black;
     background-color: #E5E5E5;
     border-width: thin;
 }
 
-#projects .project-tile a img{
+#projects .project-tile a img, #projects .project-tile div img{
     height: 20px;
     transform: translate(0px, 4px);
 }
