@@ -501,7 +501,7 @@ body{
 #experiences .experiences-tile{
     flex: 1 0 auto;
     max-width: 200px;
-    background-color: rgb(13, 34, 86, 0.7);
+    background-color: rgb(13, 34, 86, 0.85);
     border: 1px solid #E5E5E5;
     width: 170px;
     height: 200px;
@@ -509,10 +509,12 @@ body{
     position: relative;
     top: 0;
     transition: top ease 0.2s;
-}
-
-#experiences .experiences-tile a{
-    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 #experiences .experiences-tile h1{
@@ -520,53 +522,16 @@ body{
     margin: 10px;
 }
 
+#experiences .experiences-tile div{
+    flex: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #experiences .experiences-tile img{
-    width: 100px;
-}
-
-#experiences .zero img{
-    width: 150px;
-}
-
-#experiences .zero h1{
-    margin-bottom: 27px;
-}
-
-#experiences .one img{
-    width: 122px;
-}
-
-#experiences .one h1{
-    margin-bottom: 5px;
-}
-
-#experiences .two img{
-    width: 130px;
-}
-
-#experiences .two h1{
-    margin-bottom: 20px;
-}
-
-#experiences .three #first{
-    width: 120px;
-}
-
-#experiences .three #second{
-    width: 122px;
-    margin-top: 5px;
-}
-
-#experiences .three h1{
-    margin-bottom: 0px;
-}
-
-#experiences .four img{
-    width: 170px;
-}
-
-#experiences .four h1{
-    margin-bottom: 30px;
+    width: 100%;
 }
 
 #experiences .experiences-tile:hover{
