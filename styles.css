@@ -519,7 +519,7 @@ body{
 
 #experiences .experiences-tile h1{
     font-size: 20px;
-    margin: 10px;
+    margin: 0 0 10px 0;
 }
 
 #experiences .experiences-tile div{
@@ -532,6 +532,10 @@ body{
 
 #experiences .experiences-tile img{
     width: 100%;
+}
+
+#experiences .experiences-tile .small{
+    width: 80%;
 }
 
 #experiences .experiences-tile:hover{
