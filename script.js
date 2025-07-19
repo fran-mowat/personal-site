@@ -1,8 +1,10 @@
+import { Octokit } from "https://esm.sh/@octokit/core";
+ 
 let scrollToTop = () => {
     document.body.scrollTop = 0; //safari
     document.documentElement.scollTop = 0; //chrome, firefox, ie, opera 
     window.scrollTo(0,0);
-}
+};
 
 let checkScroll = () => {
     let scrollButton = document.getElementById("scroll-to-top");
@@ -37,14 +39,14 @@ let checkScroll = () => {
         mobileMenu.style.backgroundColor = "";
         dropdownButton.classList.remove("dropdown-button-click");
     }
-}
+};
 
 let copyEmail = () => {
     let snackbar = document.getElementById("snackbar")
     navigator.clipboard.writeText("franmowat33@gmail.com");
     snackbar.className = "show";
     setTimeout(function(){snackbar.className = snackbar.className.replace("show", ""); }, 3000)
-}
+};
 
 window.onscroll = function() {checkScroll()};
 
@@ -60,7 +62,7 @@ VANTA.GLOBE({
     color: 0xd1d1d1,
     color2: 0x35A3E7,
     backgroundColor: 0x50535
-  })
+});
 
 let blueChange = () => {
     let arrow = document.getElementById("arrow-container").children[0];
@@ -68,7 +70,7 @@ let blueChange = () => {
     
     arrow.style.filter = "invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%)";
     scrollText.style.color = "#2A80C0";
-}
+};
 
 let whiteChange = () => {
     let arrow = document.getElementById("arrow-container").children[0];
@@ -76,23 +78,23 @@ let whiteChange = () => {
     
     arrow.style.filter = "invert(100%) sepia(100%) saturate(0%) hue-rotate(283deg) brightness(106%) contrast(101%)";
     scrollText.style.color = "#FFFFFF";
-}
+};
 
-let scrollDiv = document.getElementById("scroll")
-scrollDiv.addEventListener("mouseenter", blueChange)
-scrollDiv.addEventListener("mouseleave", whiteChange)
+let scrollDiv = document.getElementById("scroll");
+scrollDiv.addEventListener("mouseenter", blueChange);
+scrollDiv.addEventListener("mouseleave", whiteChange);
 
 let setGrey = () => {
     document.getElementById("email-address").style.opacity = 0.7;
-}
+};
 
 let setWhite = () => {
     document.getElementById("email-address").style.opacity = 1;
-}
+};
 
 let emailHover = document.getElementById("email");
-emailHover.addEventListener("mouseenter", setGrey)
-emailHover.addEventListener("mouseleave", setWhite)
+emailHover.addEventListener("mouseenter", setGrey);
+emailHover.addEventListener("mouseleave", setWhite);
 
 scrollCue.init();
 
@@ -112,7 +114,7 @@ let removeMenu = () => {
         dropdownButton.classList.remove("dropdown-button-click");
         mobileMenu.style.backgroundColor = "";
     }
-}
+};
 
 let menuDisplay = (e) => {
     e.stopPropagation();
@@ -129,7 +131,54 @@ let menuDisplay = (e) => {
     
     document.body.addEventListener("click", removeMenu);
     document.body.setAttribute("listener", true);
-}
+};
 
 let dropdownButton = document.getElementById("dropdown-button");
 dropdownButton.addEventListener("click", menuDisplay);
+
+const getRepoLanguages = async (repositoryName) => {
+    const projectTile = document.getElementById(repositoryName);
+
+    try {
+        const response = await octokit.request(`GET /repos/fran-mowat/${repositoryName}/languages`);
+        const data = response.data; 
+
+        const languages = Object.keys(data);
+
+        let totalBytes = 0; 
+        Object.values(data).forEach((bytes) => {
+            totalBytes += bytes; 
+        });
+        
+        const languageTitle = document.createElement("p");
+        languageTitle.classList.add("language-title");
+        languageTitle.innerHTML = "Languages: ";
+
+        projectTile.appendChild(languageTitle);
+
+        languages.forEach((language) => {
+            let languageBytes = data[language]; 
+            let languagePercentage = ((languageBytes / totalBytes) * 100).toFixed(1);
+
+            let span = document.createElement("span");
+            span.classList.add("language");
+            span.innerHTML = `${language}: ${languagePercentage}%`;
+
+            projectTile.appendChild(span);
+            console.log(projectTile.children);
+        }); 
+    } catch (ex) {
+        console.log(`Exception occurred when accessing ${repositoryName} repository languages: ${ex}`);
+    }
+};
+
+const octokit = new Octokit();
+getRepoLanguages("bookstore-API");
+getRepoLanguages("movie-database-application");
+getRepoLanguages("tic-tac-toe");
+getRepoLanguages("colour-picker");
+getRepoLanguages("minesweeper");
+getRepoLanguages("etch-a-sketch");
+getRepoLanguages("estate-agent");
+getRepoLanguages("spinner");
+
