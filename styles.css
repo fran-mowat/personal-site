@@ -385,12 +385,20 @@ body{
 }
 
 #projects #project-container{
-    display: block;
-    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+#projects .project-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
 }
 
 #projects .project-tile{
-    margin: 25px auto;
     background-color: white;
     border-radius: 5px;
     padding: 10px;
@@ -400,25 +408,9 @@ body{
     transition: top ease 0.2s;
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 800px){
     #projects #project-container{
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 25px;
-    }
-
-    #projects .project-tile{
-        margin: auto;
-    }
-
-    #projects .project-tile p{
-        height: 64px;
-    }
-}
-
-@media screen and (min-width: 1200px){
-    #projects .project-tile p{
-        height: auto;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
