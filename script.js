@@ -1,13 +1,16 @@
 import { Octokit } from "https://esm.sh/@octokit/core";
  
-let scrollToTop = () => {
+const scrollToTop = () => {
     document.body.scrollTop = 0; //safari
     document.documentElement.scollTop = 0; //chrome, firefox, ie, opera 
     window.scrollTo(0,0);
 };
 
+const scrollButton = document.getElementById("scroll-to-top");
+scrollButton.addEventListener("click", scrollToTop);
+
+
 let checkScroll = () => {
-    let scrollButton = document.getElementById("scroll-to-top");
     let navBar = document.getElementById("menu");
     let mobileMenu = document.getElementById("mobile-menu");
     let dropdownButton = document.getElementById("dropdown-button");
@@ -165,7 +168,6 @@ const getRepoLanguages = async (repositoryName) => {
             span.innerHTML = `${language}: ${languagePercentage}%`;
 
             projectTile.appendChild(span);
-            console.log(projectTile.children);
         }); 
     } catch (ex) {
         console.log(`Exception occurred when accessing ${repositoryName} repository languages: ${ex}`);
