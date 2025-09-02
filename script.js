@@ -178,7 +178,7 @@ getRepoLanguages("movie-database-application");
 getRepoLanguages("tic-tac-toe");
 getRepoLanguages("colour-picker");
 getRepoLanguages("minesweeper");
-getRepoLanguages("etch-a-sketch");
+getRepoLanguages("trivia");
 getRepoLanguages("estate-agent");
 getRepoLanguages("spinner");
 
