@@ -8,7 +8,8 @@
     color: var(--off-white);
 
     --off-white: #F0ECEC;
-    --grey: #B1B1B1;
+    --off-white-hover: #DCDCDC;
+    --grey: #C2C2C2;
 
     --blue: #2A80C0;
     --blue-faded: #2A80C0B3;
@@ -459,7 +460,7 @@ body{
 
 #projects .project-tile a:hover{
     border: solid black;
-    background-color: var(--grey);
+    background-color: var(--off-white-hover);
     border-width: thin;
 }
 
@@ -540,7 +541,7 @@ body{
 }
 
 #experiences .experiences-tile:hover{
-    background-color: var(--navy);
+    background-color: var(--dark-blue);
     top: -8px;
     box-shadow: 5px 5px 5px var(--blue);
 }
@@ -552,7 +553,7 @@ body{
     border-radius: 5px;
     border: 1px solid var(--off-white);
     color: white;
-    background-color: var(--navy);
+    background-color: var(--dark-blue);
 }
 
 #experiences p a{
