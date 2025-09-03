@@ -9,11 +9,10 @@ const scrollToTop = () => {
 const scrollButton = document.getElementById("scroll-to-top");
 scrollButton.addEventListener("click", scrollToTop);
 
-
-let checkScroll = () => {
-    let navBar = document.getElementById("menu");
-    let mobileMenu = document.getElementById("mobile-menu");
-    let dropdownButton = document.getElementById("dropdown-button");
+const checkScroll = () => {
+    const navBar = document.getElementById("menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const dropdownButton = document.getElementById("dropdown-button");
 
     if ((document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) && document.documentElement.clientWidth >= 768){
         scrollButton.style.display = "block";
@@ -44,14 +43,17 @@ let checkScroll = () => {
     }
 };
 
-let copyEmail = () => {
+const copyEmail = () => {
     let snackbar = document.getElementById("snackbar")
     navigator.clipboard.writeText("franmowat33@gmail.com");
     snackbar.className = "show";
-    setTimeout(function(){snackbar.className = snackbar.className.replace("show", ""); }, 3000)
+    setTimeout(() => snackbar.className = snackbar.className.replace("show", ""), 3000);
 };
 
-window.onscroll = function() {checkScroll()};
+const copyEmailButton = document.getElementById("email");
+copyEmailButton.addEventListener("click", copyEmail);
+
+window.onscroll = () => checkScroll();
 
 VANTA.GLOBE({
     el: "#home",
@@ -67,50 +69,49 @@ VANTA.GLOBE({
     backgroundColor: 0x50535
 });
 
-let blueChange = () => {
-    let arrow = document.getElementById("arrow-container").children[0];
-    let scrollText = document.getElementById("scroll-text");
+const blueChange = () => {
+    const arrow = document.getElementById("arrow-container").children[0];
+    const scrollText = document.getElementById("scroll-text");
     
     arrow.style.filter = "invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%)";
     scrollText.style.color = "#2A80C0";
 };
 
 let whiteChange = () => {
-    let arrow = document.getElementById("arrow-container").children[0];
-    let scrollText = document.getElementById("scroll-text");
+    const arrow = document.getElementById("arrow-container").children[0];
+    const scrollText = document.getElementById("scroll-text");
     
     arrow.style.filter = "invert(100%) sepia(100%) saturate(0%) hue-rotate(283deg) brightness(106%) contrast(101%)";
     scrollText.style.color = "#FFFFFF";
 };
 
-let scrollDiv = document.getElementById("scroll");
+const scrollDiv = document.getElementById("scroll");
 scrollDiv.addEventListener("mouseenter", blueChange);
 scrollDiv.addEventListener("mouseleave", whiteChange);
 
-let setGrey = () => {
+const setGrey = () => {
     document.getElementById("email-address").style.opacity = 0.7;
 };
 
-let setWhite = () => {
+const setWhite = () => {
     document.getElementById("email-address").style.opacity = 1;
 };
 
-let emailHover = document.getElementById("email");
+const emailHover = document.getElementById("email");
 emailHover.addEventListener("mouseenter", setGrey);
 emailHover.addEventListener("mouseleave", setWhite);
 
 scrollCue.init();
 
-let removeMenu = () => {
-    let dropdownContent = document.getElementById("dropdown-content");
+const removeMenu = () => {
+    const dropdownContent = document.getElementById("dropdown-content");
     dropdownContent.style.display = "none";
 
-    let mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
 
     document.body.removeEventListener("click", removeMenu);
     document.body.setAttribute("listener", false);
 
-    let dropdownButton = document.getElementById("dropdown-button");
     dropdownButton.addEventListener("click", menuDisplay);
 
     if (! (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40)){
@@ -119,16 +120,15 @@ let removeMenu = () => {
     }
 };
 
-let menuDisplay = (e) => {
+const menuDisplay = (e) => {
     e.stopPropagation();
 
-    let dropdownContent = document.getElementById("dropdown-content");
+    const dropdownContent = document.getElementById("dropdown-content");
     dropdownContent.style.display = "block";
 
-    let mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
     mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
 
-    let dropdownButton = document.getElementById("dropdown-button");
     dropdownButton.classList.add("dropdown-button-click");
     dropdownButton.removeEventListener("click", menuDisplay);
     
@@ -136,7 +136,7 @@ let menuDisplay = (e) => {
     document.body.setAttribute("listener", true);
 };
 
-let dropdownButton = document.getElementById("dropdown-button");
+const dropdownButton = document.getElementById("dropdown-button");
 dropdownButton.addEventListener("click", menuDisplay);
 
 const getRepoLanguages = async (repositoryName) => {
