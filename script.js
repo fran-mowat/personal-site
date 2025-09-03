@@ -175,12 +175,8 @@ const getRepoLanguages = async (repositoryName) => {
 };
 
 const octokit = new Octokit();
-getRepoLanguages("bookstore-API");
-getRepoLanguages("movie-database-application");
-getRepoLanguages("tic-tac-toe");
-getRepoLanguages("colour-picker");
-getRepoLanguages("minesweeper");
-getRepoLanguages("trivia");
-getRepoLanguages("estate-agent");
-getRepoLanguages("spinner");
+const projectsTiles = document.querySelectorAll('.project-tile');
+projectsTiles.forEach(projectTile => {
+    getRepoLanguages(projectTile.id);
+});
 
