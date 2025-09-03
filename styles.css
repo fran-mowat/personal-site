@@ -5,9 +5,18 @@
 *{
     font-family: Segoe UI, Roboto, sans-serif;
     text-align: center;
-    color: white;
+    color: var(--off-white);
+
+    --off-white: #F0ECEC;
+    --grey: #B1B1B1;
+
     --blue: #2A80C0;
+    --blue-faded: #2A80C0B3;
+    --blue-translucent: #2A80C033;
+
     --dark-blue: #0D2256;
+    --dark-blue-faded: #0D2256D9;
+
     --navy: #050535;
 }
 
@@ -159,7 +168,7 @@ body{
     
     #menu .top:hover{
         --underline-width: 100%;
-        color: #b9b9b9;
+        color: var(--grey);
     }
     
     #menu .offset{
@@ -308,8 +317,8 @@ body{
     width: 300px;
     border-radius: 50%;
     padding: 5px;
-    background: conic-gradient(rgb(42, 128, 192, 0.2) 0deg, rgb(42, 128, 192, 0.2) 90deg, var(--blue) 100deg, var(--blue) 110deg, rgb(42, 128, 192, 0.2) 120deg, rgb(42, 128, 192, 0.2) 270deg, var(--blue) 280deg, var(--blue) 290deg, rgb(42, 128, 192, 0.2) 300deg);
-    animation: rotation 10s linear infinite ;
+    background: conic-gradient(var(--blue-translucent) 0deg, var(--blue-translucent) 90deg, var(--blue) 100deg, var(--blue) 110deg, var(--blue-translucent) 120deg, var(--blue-translucent) 270deg, var(--blue) 280deg, var(--blue) 290deg, var(--blue-translucent) 300deg);
+    animation: rotation 10s linear infinite;
 }
 
 @keyframes rotation {
@@ -433,7 +442,7 @@ body{
 }
 
 #projects .project-link{
-    background-color: #F0ECEC;
+    background-color: var(--off-white);
     border: 1px solid grey;
     border-width: thin;
     border-radius: 3px;
@@ -450,7 +459,7 @@ body{
 
 #projects .project-tile a:hover{
     border: solid black;
-    background-color: #E5E5E5;
+    background-color: var(--grey);
     border-width: thin;
 }
 
@@ -467,7 +476,7 @@ body{
 #projects .project-tile .language{
     font-size: 13px;
     font-family: monospace;
-    background-color: #F0ECEC;
+    background-color: var(--off-white);
     margin-left: 3px;
     margin-right: 3px;
 }
@@ -493,8 +502,8 @@ body{
 #experiences .experiences-tile{
     flex: 1 0 auto;
     max-width: 200px;
-    background-color: rgb(13, 34, 86, 0.85);
-    border: 1px solid #E5E5E5;
+    background-color: var(--dark-blue-faded);
+    border: 1px solid var(--off-white);
     width: 170px;
     height: 200px;
     border-radius: 5px;
@@ -531,7 +540,7 @@ body{
 }
 
 #experiences .experiences-tile:hover{
-    background-color: rgb(13, 34, 86, 1);
+    background-color: var(--navy);
     top: -8px;
     box-shadow: 5px 5px 5px var(--blue);
 }
@@ -541,9 +550,9 @@ body{
     margin: 25px auto;
     max-width: 500px;
     border-radius: 5px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--off-white);
     color: white;
-    background-color: rgb(13, 34, 86, 1);
+    background-color: var(--navy);
 }
 
 #experiences p a{
@@ -577,7 +586,7 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     background-size: 67px;
-    background-color: rgb(42, 128, 192, 0.7);
+    background-color: var(--blue-faded);
 }
 
 #contact #email div{
@@ -657,10 +666,9 @@ body{
 
 #snackbar{
     visibility: hidden;
-    background-color: #000000;
+    background-color: black;
     opacity: 1;
     border-radius: 5px;
-    color: white;
     padding: 15px;
     text-align: center;
     bottom: 30px;
