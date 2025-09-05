@@ -6,54 +6,54 @@ const scrollToTop = () => {
     window.scrollTo(0,0);
 };
 
-const scrollButton = document.getElementById("scroll-to-top");
-scrollButton.addEventListener("click", scrollToTop);
+const scrollToTopButton = document.getElementById("scroll-to-top");
+scrollToTopButton.addEventListener("click", scrollToTop);
 
-const checkScroll = () => {
+const checkPagePosition = () => {
     const navBar = document.getElementById("menu");
     const mobileMenu = document.getElementById("mobile-menu");
     const dropdownButton = document.getElementById("dropdown-button");
 
     if ((document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) && document.documentElement.clientWidth >= 768){
-        scrollButton.style.display = "block";
+        scrollToTopButton.classList.add("display");
     } else {
-        scrollButton.style.display = "none";
+        scrollToTopButton.classList.remove("display");
     }
 
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
-        navBar.style.backgroundColor = "rgb(255, 255, 255, 0.7)";
+        navBar.classList.add("display");
 
         for (let i = 1; i < navBar.children.length; i++){ //start from 1 to avoid logo div
             navBar.children[i].firstChild.firstChild.classList = "offset";
         }
 
     } else {
-        navBar.style.backgroundColor = "rgb(0, 0, 0, 0)";
+        navBar.classList.remove("display");
         for (let i = 1; i < navBar.children.length; i++){
             navBar.children[i].firstChild.firstChild.classList = "top";
         }
     }
 
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
-        mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
+        mobileMenu.style.backgroundColor = "#ffffffe6";
         dropdownButton.classList.add("dropdown-button-click");
     } else if (document.body.getAttribute("listener") == false || document.body.getAttribute("listener") == null){ //menu is not already clicked open
-        mobileMenu.style.backgroundColor = "";
+        mobileMenu.style.backgroundColor = "none";
         dropdownButton.classList.remove("dropdown-button-click");
     }
 };
 
+window.addEventListener("scroll", checkPagePosition);
+
 const copyEmail = () => {
-    let snackbar = document.getElementById("snackbar")
+    const snackbar = document.getElementById("snackbar");
     navigator.clipboard.writeText("franmowat33@gmail.com");
-    snackbar.className = "show";
-    setTimeout(() => snackbar.className = snackbar.className.replace("show", ""), 3000);
+    snackbar.classList.add("show");
+    setTimeout(() => snackbar.classList.remove("show"), 3000);
 };
 
 const copyEmailButton = document.getElementById("email");
 copyEmailButton.addEventListener("click", copyEmail);
-
-window.onscroll = () => checkScroll();
 
 VANTA.GLOBE({
     el: "#home",
@@ -68,38 +68,6 @@ VANTA.GLOBE({
     color2: 0x35A3E7,
     backgroundColor: 0x50535
 });
-
-const blueChange = () => {
-    const arrow = document.getElementById("arrow-container").children[0];
-    const scrollText = document.getElementById("scroll-text");
-    
-    arrow.style.filter = "invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%)";
-    scrollText.style.color = "#2A80C0";
-};
-
-let whiteChange = () => {
-    const arrow = document.getElementById("arrow-container").children[0];
-    const scrollText = document.getElementById("scroll-text");
-    
-    arrow.style.filter = "invert(100%) sepia(100%) saturate(0%) hue-rotate(283deg) brightness(106%) contrast(101%)";
-    scrollText.style.color = "#FFFFFF";
-};
-
-const scrollDiv = document.getElementById("scroll");
-scrollDiv.addEventListener("mouseenter", blueChange);
-scrollDiv.addEventListener("mouseleave", whiteChange);
-
-const setGrey = () => {
-    document.getElementById("email-address").style.opacity = 0.7;
-};
-
-const setWhite = () => {
-    document.getElementById("email-address").style.opacity = 1;
-};
-
-const emailHover = document.getElementById("email");
-emailHover.addEventListener("mouseenter", setGrey);
-emailHover.addEventListener("mouseleave", setWhite);
 
 scrollCue.init();
 

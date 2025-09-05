@@ -7,6 +7,8 @@
     text-align: center;
     color: var(--off-white);
 
+    --white-faded: #ffffffb3;
+    
     --off-white: #F0ECEC;
     --off-white-hover: #DCDCDC;
     --grey: #C2C2C2;
@@ -32,6 +34,11 @@ body{
 
 #menu{
    display: none;
+   background-color: none;
+}
+
+#menu.display{
+    background-color: var(--white-faded);
 }
 
 #mobile-menu{
@@ -88,7 +95,7 @@ body{
 #mobile-menu #dropdown-content{
     display: none;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: #ffffffe6;
     min-width: 160px;
     z-index: 1;
     right: 0;
@@ -101,7 +108,7 @@ body{
 }
 
 #mobile-menu #dropdown-content div:hover{
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: #ffffff4d;
 }
 
 #mobile-menu #dropdown-content div:hover .mobile-menu-items{
@@ -128,7 +135,7 @@ body{
     }
 
     #menu{
-        background-color: rgba(255, 255, 255, 0);
+        background-color: none;
         z-index: 1000;
         display: flex;
         padding: 10px;
@@ -227,6 +234,10 @@ body{
     font-size: 17px;
     display: inline-block;
     margin: 90px auto 0px;
+}
+
+#home #scroll:hover{
+    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
 }
 
 #home #scroll a{
@@ -625,6 +636,11 @@ body{
 
 #contact #email-address{
     display: flex;
+    opacity: 1;
+}
+
+#contact #email-address:hover{
+    opacity: 0.7;
 }
 
 #bottom{
@@ -634,6 +650,10 @@ body{
 
 #scroll-to-top{
     display: none;
+}
+
+#scroll-to-top.display{
+    display: block;
 }
 
 @media screen and (min-width: 768px){
