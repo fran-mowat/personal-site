@@ -588,59 +588,38 @@ body{
     background-color: var(--blue);
     border-radius: 10px;
     margin: 40px auto;
-    display: flex;
     transition: background-color 0.5s;
-    background-position: right;
+    cursor: pointer;
+    display: flex;
+    opacity: 1;
 }
 
 #contact #email:hover{
     background-image: url("./images/copy-logo.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 67px;
+    background-size: 70px;
     background-color: var(--blue-faded);
-}
-
-#contact #email div{
-    flex: 1;
+    opacity: 0.7;
 }
 
 #contact #email img{
     display: none;
 }
 
-#contact #email #email-holder{
-    display: none;
-}
-
 #contact #email p{
-    text-align: center;
-    padding: 21px;
+    padding: 20px;
     flex: 1;
 }
 
 @media screen and (min-width: 550px){
     #contact #email img{
-        display: inline;
-        height: 100px;
-    }
-
-    #contact #email #email-holder{
         display: block;
     }
 
     #contact #email p{
         text-align: left;
     }
-}
-
-#contact #email-address{
-    display: flex;
-    opacity: 1;
-}
-
-#contact #email-address:hover{
-    opacity: 0.7;
 }
 
 #bottom{
