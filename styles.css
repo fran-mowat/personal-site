@@ -1,12 +1,6 @@
 :root{
     scroll-behavior: smooth;
-}
-
-*{
-    font-family: Segoe UI, Roboto, sans-serif;
-    text-align: center;
-    color: var(--off-white);
-
+    
     --white-faded: #ffffffb3;
     
     --off-white: #F0ECEC;
@@ -24,7 +18,10 @@
 }
 
 body{
-    margin: 0px;
+    margin: 0;
+    font-family: Segoe UI, Roboto, sans-serif;
+    text-align: center;
+    color: var(--off-white);
 }
 
 .section-div{
@@ -34,7 +31,6 @@ body{
 
 #menu{
    display: none;
-   background-color: none;
 }
 
 #menu.display{
@@ -135,7 +131,6 @@ body{
     }
 
     #menu{
-        background-color: none;
         z-index: 1000;
         display: flex;
         padding: 10px;
@@ -242,6 +237,7 @@ body{
 
 #home #scroll a{
     text-decoration: none;
+    color: var(--off-white);
 }
 
 #home #scroll p, #home #scroll #arrow-container{
@@ -359,10 +355,12 @@ body{
 #about p a{
     font-style: italic;
     text-decoration: none;
+    color: var(--off-white);
 }
 
 #about #resume-button{
     background-color: var(--blue);
+    color: var(--off-white);
     border-radius: 5px;
     font-size: 15px;
     border: none;
