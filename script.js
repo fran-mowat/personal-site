@@ -10,7 +10,7 @@ const scrollToTopButton = document.getElementById("scroll-to-top");
 scrollToTopButton.addEventListener("click", scrollToTop);
 
 const checkPagePosition = () => {
-    const navBar = document.getElementById("menu");
+    const menu = document.getElementById("menu");
     const mobileMenu = document.getElementById("mobile-menu");
     const dropdownButton = document.getElementById("dropdown-button");
 
@@ -21,17 +21,9 @@ const checkPagePosition = () => {
     }
 
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
-        navBar.classList.add("display");
-
-        for (let i = 1; i < navBar.children.length; i++){ //start from 1 to avoid logo div
-            navBar.children[i].firstChild.firstChild.classList = "offset";
-        }
-
+        menu.classList.add("display");
     } else {
-        navBar.classList.remove("display");
-        for (let i = 1; i < navBar.children.length; i++){
-            navBar.children[i].firstChild.firstChild.classList = "top";
-        }
+        menu.classList.remove("display");
     }
 
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){

@@ -125,7 +125,7 @@ body{
     padding: 0.1em 0;
 }
 
-@media screen and (min-width: 768px){
+@media (min-width: 768px){
     #mobile-menu{
         display: none;
     }
@@ -133,20 +133,17 @@ body{
     #menu{
         z-index: 1000;
         display: flex;
-        padding: 10px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 30px 40px;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
     }
 
-    #menu div{
-        flex: 1;
-    }
-
     #menu img{
         height: 30px;
-        margin-top: 12px;
         filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
         transition: filter 0.5s;
     }
@@ -155,36 +152,24 @@ body{
         filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(75%) contrast(85%);
     }
     
-    #menu p, #menu a{
-        margin-top: 16px;
-        margin-bottom: 16px;
-        text-decoration: none;
-    }
-    
-    #menu .top{
+    #menu a:not(a:first-of-type){
         color: white;
+        text-decoration: none;
         background: linear-gradient(var(--blue) 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
-        display: inline-block;
         transition: background-size 0.5s;
         padding: 0.1em 0;
     }
     
-    #menu .top:hover{
+    #menu a:hover{
         --underline-width: 100%;
         color: var(--grey);
     }
     
-    #menu .offset{
+    #menu.display a:not(a:first-of-type){
         color: black;
         background: linear-gradient(var(--blue) 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
-        display: inline-block;
         transition: background-size 0.5s;
         padding: 0.1em 0;
-    }
-    
-    #menu .offset:hover{
-        --underline-width: 100%;
-        color: black;
     }
 }
 
