@@ -565,16 +565,16 @@ body{
 }
 
 #snackbar{
-    visibility: hidden;
+    visibility: visible;
     background-color: black;
     opacity: 1;
     border-radius: 5px;
-    padding: 15px;
-    text-align: center;
+    padding: 20px 40px;
+    box-shadow: 0 0 8px var(--dark-grey);
+    position: fixed;
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    position: fixed;
 }
 
 #snackbar.show{
