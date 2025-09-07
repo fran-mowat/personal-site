@@ -11,10 +11,8 @@ scrollToTopButton.addEventListener("click", scrollToTop);
 
 const checkPagePosition = () => {
     const menu = document.getElementById("menu");
-    const mobileMenu = document.getElementById("mobile-menu");
-    const dropdownButton = document.getElementById("dropdown-button");
 
-    if ((document.body.scrollTop > 450 || document.documentElement.scrollTop > 450) && document.documentElement.clientWidth >= 768){
+    if (document.body.scrollTop > 450 || document.documentElement.scrollTop > 450){
         scrollToTopButton.classList.add("display");
     } else {
         scrollToTopButton.classList.remove("display");
@@ -24,14 +22,6 @@ const checkPagePosition = () => {
         menu.classList.add("display");
     } else {
         menu.classList.remove("display");
-    }
-
-    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40){
-        mobileMenu.style.backgroundColor = "#ffffffe6";
-        dropdownButton.classList.add("dropdown-button-click");
-    } else if (document.body.getAttribute("listener") == false || document.body.getAttribute("listener") == null){ //menu is not already clicked open
-        mobileMenu.style.backgroundColor = "none";
-        dropdownButton.classList.remove("dropdown-button-click");
     }
 };
 
@@ -64,40 +54,24 @@ VANTA.GLOBE({
 scrollCue.init();
 
 const removeMenu = () => {
-    const dropdownContent = document.getElementById("dropdown-content");
-    dropdownContent.style.display = "none";
+    mobileMenu.classList.remove("open");
 
-    const mobileMenu = document.getElementById("mobile-menu");
-
+    dropdownButton.addEventListener("click", displayMenu);
     document.body.removeEventListener("click", removeMenu);
-    document.body.setAttribute("listener", false);
-
-    dropdownButton.addEventListener("click", menuDisplay);
-
-    if (! (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40)){
-        dropdownButton.classList.remove("dropdown-button-click");
-        mobileMenu.style.backgroundColor = "";
-    }
 };
 
-const menuDisplay = (e) => {
+const displayMenu = (e) => {
     e.stopPropagation();
 
-    const dropdownContent = document.getElementById("dropdown-content");
-    dropdownContent.style.display = "block";
+    mobileMenu.classList.add("open");
 
-    const mobileMenu = document.getElementById("mobile-menu");
-    mobileMenu.style.backgroundColor = "rgba(255, 255, 255, 0.9)";
-
-    dropdownButton.classList.add("dropdown-button-click");
-    dropdownButton.removeEventListener("click", menuDisplay);
-    
     document.body.addEventListener("click", removeMenu);
-    document.body.setAttribute("listener", true);
+    dropdownButton.removeEventListener("click", displayMenu);  
 };
 
+const mobileMenu = document.getElementById("mobile-menu");
 const dropdownButton = document.getElementById("dropdown-button");
-dropdownButton.addEventListener("click", menuDisplay);
+dropdownButton.addEventListener("click", displayMenu);
 
 const getRepoLanguages = async (repositoryName) => {
     const projectTile = document.getElementById(repositoryName);

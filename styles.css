@@ -33,96 +33,49 @@ body{
    display: none;
 }
 
-#menu.display{
-    background-color: var(--white-faded);
-}
-
 #mobile-menu{
     position: fixed;
-    z-index: 1000;
-    padding: 10px;
-    padding-bottom: 0px;
+    z-index: 10;
+    padding: 0;
     top: 0;
     right: 0;
     left: 0;
+    background-color: #ffffff98;
+}
+
+#mobile-menu.open{
+    background-color: #ffffffe3;
 }
 
 #mobile-menu #menu-header{
-    height: 50px;
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 #mobile-menu img{
-    display: inline;
     height: 30px;
-    margin: 12px;
 }
 
-#mobile-menu #logo{
+.logo, #mobile-menu #dropdown-button{
     filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
-    transition: filter 0.5s;
-    float: left;
-}
-
-#mobile-menu #logo:hover{
-    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(75%) contrast(85%);
-}
-
-#mobile-menu #dropdown-button{
-    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(283deg) brightness(106%) contrast(101%);
-    transition: filter 0.5s;
-    float: right;
-}
-
-#mobile-menu #dropdown-button:hover{
-    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
-}
-
-#mobile-menu #menu-header .dropdown-button-click{
-    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
-    transition: filter 0.5s;
-}
-
-#mobile-menu #menu-header .dropdown-button-click:hover{
-    filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(75%) contrast(85%);
 }
 
 #mobile-menu #dropdown-content{
     display: none;
-    position: absolute;
-    background-color: #ffffffe6;
-    min-width: 160px;
-    z-index: 1;
-    right: 0;
-    left: 0;
+    flex-direction: column;
 }
 
-#mobile-menu #dropdown-content div{
-    display: block;
-    padding: 12px;
-}
-
-#mobile-menu #dropdown-content div:hover{
-    background-color: #ffffff4d;
-}
-
-#mobile-menu #dropdown-content div:hover .mobile-menu-items{
-    --underline-width: 100%;
-    color: black;
+#mobile-menu.open #dropdown-content{
+    display: flex;
 }
 
 #mobile-menu #dropdown-content a{
+    padding: 12px;
     text-decoration: none;
-}
-
-#mobile-menu .mobile-menu-items{
     color: black;
-    width: fit-content;
-    margin: auto;
-    background: linear-gradient(var(--blue) 0 0) bottom left/ var(--underline-width, 0%) 0.1em no-repeat;
-    transition: background-size 0.5s;
-    padding: 0.1em 0;
 }
 
 @media (min-width: 768px){
@@ -131,7 +84,7 @@ body{
     }
 
     #menu{
-        z-index: 1000;
+        z-index: 10;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -142,9 +95,12 @@ body{
         right: 0;
     }
 
+    #menu.display{
+        background-color: var(--white-faded);
+    }
+
     #menu img{
         height: 30px;
-        filter: invert(42%) sepia(83%) saturate(552%) hue-rotate(165deg) brightness(88%) contrast(85%);
         transition: filter 0.5s;
     }
     
