@@ -408,28 +408,25 @@ body{
 #experiences{
     background-color: var(--dark-blue);
     background-image: url("./images/navy-background.png");
-    padding: 80px 86px 20px;
+    padding: 80px 80px 20px;
 }
 
-#experiences h1{
-    margin-bottom: 35px;
+#experiences > h1{
+    margin-bottom: 45px;
 }
 
 #experiences #experiences-container{
     display: flex;
-    gap: 20px;
-    margin: auto;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
 }
 
 #experiences .experiences-tile{
-    flex: 1 0 auto;
-    max-width: 200px;
+    max-width: 160px;
+    height: 175px;
     background-color: var(--dark-blue-faded);
     border: 1px solid var(--off-white);
-    width: 170px;
-    height: 200px;
     border-radius: 5px;
     position: relative;
     top: 0;
@@ -437,20 +434,25 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-sizing: border-box;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 30px 20px;
+}
+
+#experiences .experiences-tile:hover{
+    background-color: var(--dark-blue);
+    top: -6px;
+    box-shadow: 5px 5px 5px var(--blue);
 }
 
 #experiences .experiences-tile h1{
     font-size: 20px;
-    margin: 0 0 10px 0;
+    margin: 0;
 }
 
 #experiences .experiences-tile div{
     flex: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -459,14 +461,8 @@ body{
     width: 100%;
 }
 
-#experiences .experiences-tile .small{
+#experiences .experiences-tile img.small{
     width: 80%;
-}
-
-#experiences .experiences-tile:hover{
-    background-color: var(--dark-blue);
-    top: -8px;
-    box-shadow: 5px 5px 5px var(--blue);
 }
 
 #experiences p{
@@ -479,7 +475,7 @@ body{
     background-color: var(--dark-blue);
 }
 
-#experiences p a{
+#experiences a{
     color: var(--blue);
 }
 
