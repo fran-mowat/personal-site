@@ -3,9 +3,11 @@
     
     --white-faded: #ffffffb3;
     
-    --off-white: #F0ECEC;
-    --off-white-hover: #DCDCDC;
+    --off-white: #ebebeb;
+    --off-white-hover: #e3e3e3;
     --grey: #C2C2C2;
+
+    --dark-grey: #5c5c5c;
 
     --blue: #2A80C0;
     --blue-faded: #2A80C0B3;
@@ -301,12 +303,8 @@ body{
     background-color: var(--navy);
 }
 
-#projects h1{
-    margin-bottom: 30px;
-}
-
 #projects p{
-    margin-bottom: 50px;
+    margin: 30px 0 50px;
 }
 
 #projects a{
@@ -319,7 +317,13 @@ body{
     gap: 20px;
 }
 
-#projects .project-column{
+@media (min-width: 800px){
+    #projects #project-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+#projects #project-container .project-column{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -329,18 +333,13 @@ body{
 
 #projects .project-tile{
     background-color: white;
+    color: black;
     border-radius: 5px;
     padding: 10px;
+    max-width: 520px;
     position: relative;
     top: 0;
-    max-width: 520px;
     transition: top ease 0.2s;
-}
-
-@media (min-width: 800px){
-    #projects #project-container{
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 #projects .project-tile:hover{
@@ -348,57 +347,62 @@ body{
     box-shadow: 5px 5px 5px var(--blue);
 }
 
-#projects .project-tile p, #projects .project-tile h1, #projects .project-tile button, #projects .project-tile span{
-    color: black;
-}
-
 #projects .project-tile h1{
     font-size: 20px;
-    margin: 13px;
 }
 
 #projects .project-tile p{
     margin: 16px 16px;
 }
 
-#projects .project-link{
+#projects .project-tile .buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+#projects .project-tile .buttons > *{
     background-color: var(--off-white);
     border: 1px solid grey;
-    border-width: thin;
     border-radius: 3px;
-    padding: 2px 8px 7px 8px;
-    display: inline-block;
+    padding: 7px 10px;
     color: black;
     text-decoration: none;
     font-size: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 15px;
 }
 
-#projects .project-link.disabled{
-    cursor: not-allowed;
-}
-
-#projects .project-tile a:hover{
-    border: solid black;
+#projects .project-tile .buttons a:hover{
+    border-color: var(--dark-grey);
     background-color: var(--off-white-hover);
-    border-width: thin;
 }
 
-#projects .project-tile a img, #projects .project-tile div img{
+#projects .project-tile .buttons .disabled{
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+#projects .project-tile img{
     height: 20px;
-    transform: translate(0px, 4px);
 }
 
 #projects .project-tile .language-title{
     display: inline;
-    margin: 3px;
+    margin: 0 3px;
 }
 
 #projects .project-tile .language{
     font-size: 13px;
     font-family: monospace;
     background-color: var(--off-white);
-    margin-left: 3px;
-    margin-right: 3px;
+    margin: 0 3px;
 }
 
 #experiences{
