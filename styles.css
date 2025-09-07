@@ -487,7 +487,6 @@ body{
 #contact p{
     font-size: 17px;
     max-width: 740px;
-    margin: auto;
     line-height: 2em;
 }
 
@@ -498,8 +497,12 @@ body{
     margin: 40px auto;
     transition: background-color 0.5s;
     cursor: pointer;
-    display: flex;
     opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
 }
 
 #contact #email:hover{
@@ -508,25 +511,17 @@ body{
     background-position: center;
     background-size: 70px;
     background-color: var(--blue-faded);
-    opacity: 0.7;
+    opacity: 0.7 !important;
 }
 
 #contact #email img{
     display: none;
 }
 
-#contact #email p{
-    padding: 20px;
-    flex: 1;
-}
-
 @media (min-width: 550px){
     #contact #email img{
         display: block;
-    }
-
-    #contact #email p{
-        text-align: left;
+        width: 100px;
     }
 }
 
