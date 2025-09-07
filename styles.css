@@ -204,57 +204,75 @@ body{
 
 #about{
     background-color: var(--dark-blue);
-    display: block;
-    padding: 55px 5px;
+    padding: 55px 10px;
     overflow: hidden;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+@media (min-width: 500px){
+    #about{
+        padding: 80px 55px 55px;
+    }
+}
+
+@media (min-width: 1200px){
+    #about{
+        flex-direction: row-reverse;
+        gap: 50px;
+        padding: 80px 80px 55px;
+    }
+}
+
+#about #text-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+#about a{
+    text-decoration: none;
+    color: var(--off-white);
+}
+
+#about p a{
+    font-style: italic;
+}
+
+#about #resume-button{
+    background-color: var(--blue);
+    border-radius: 5px;
+    border: none;
+    padding: 12px;
+    margin: 30px 0;
+    background-size: 200% 200%;
+    transition: background-position 1s;
+    background-position: right;
+    background-image: linear-gradient(to right, white 50%, var(--blue) 50%);
+    transition: color 1s, background-position 1s;
+    width: 250px;
+}
+
+#about #resume-button:hover{
+    background-position: left;
+    color: var(--blue);
 }
 
 #about #image-container{
-    display: none;
-}
-
-#about #small-image-container{
-    display: block;
     height: 300px;
-    width: 300px;
-    margin: auto;
-    margin-top: 50px;
-}
-
-@media screen and (min-width: 500px){
-    #about{
-        padding: 55px;
-        padding-top: 80px;
-    }
-}
-
-@media screen and (min-width: 1200px){
-    #about{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    #about #image-container{
-        display: block;
-        height: 300px;
-        width: 300px;
-        flex: 0.7;
-        position: relative;
-    }
-
-    #about #small-image-container{
-        display: none;
-    }
 }
 
 #about img{
-    height: 300px;
+    height: 100%;
     border-radius: 50%;
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 0;
+    z-index: 10;
+    position: relative;
 }
 
 #about .border-spin{
@@ -276,56 +294,6 @@ body{
     } to{
         transform: rotate(360deg);
     }
-}
-
-#about #txt-content{
-    flex: 1;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#about h1, #about p, #about #resume-button{
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
-#about p{
-    font-size: 17px;
-}
-
-#about p a{
-    font-style: italic;
-    text-decoration: none;
-    color: var(--off-white);
-}
-
-#about #resume-button{
-    background-color: var(--blue);
-    color: var(--off-white);
-    border-radius: 5px;
-    font-size: 15px;
-    border: none;
-    padding: 12px;
-    display: block;
-    margin: auto;
-    margin-bottom: 30px;
-    background-size: 200% 200%;
-    transition: background-position 1s;
-    background-position: right;
-    background-image: linear-gradient(to right, white 50%, var(--blue) 50%);
-    text-decoration: none;
-    transition: color 1s, background-position 1s;
-    width: 250px;
-}
-
-#about #resume-button:hover{
-    background-position: left;
-    color: var(--blue);
-}
-
-#about .start-end-div{
-    flex: 0.1;
-    width: 50px;
 }
 
 #projects{
@@ -368,7 +336,7 @@ body{
     transition: top ease 0.2s;
 }
 
-@media screen and (min-width: 800px){
+@media (min-width: 800px){
     #projects #project-container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -551,7 +519,7 @@ body{
     flex: 1;
 }
 
-@media screen and (min-width: 550px){
+@media (min-width: 550px){
     #contact #email img{
         display: block;
     }
@@ -574,7 +542,7 @@ body{
     display: block;
 }
 
-@media screen and (min-width: 768px){
+@media (min-width: 768px){
     #scroll-to-top{
         display: none;
         position: fixed;

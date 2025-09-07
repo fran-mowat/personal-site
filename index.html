@@ -38,43 +38,37 @@
         </div>
     </header>
 
-    <div id="home" class="section-div" data-cues="slideInUp" data-group="main">
-        <p>Fran Mowat</p>
-        <p>Computer science student, tech enthusiast, adventurer</p>
-        <div id="links">
-            <a href="https://github.com/fran-mowat" target="_blank">
-                <img src="./images/github-mark-white.svg" alt="GitHub logo">
-            </a>
-            <a href="https://www.linkedin.com/in/fran-mowat/" target="_blank">
-                <img src="./images/linked-in.png" alt="LinkedIn logo">
+    <div id="home" class="section-div">
+        <div data-cues="slideInUp" data-group="main">
+            <p>Fran Mowat</p>
+            <p>Computer science student, tech enthusiast, adventurer</p>
+            <div id="links">
+                <a href="https://github.com/fran-mowat" target="_blank">
+                    <img src="./images/github-mark-white.svg" alt="GitHub logo">
+                </a>
+                <a href="https://www.linkedin.com/in/fran-mowat/" target="_blank">
+                    <img src="./images/linked-in.png" alt="LinkedIn logo">
+                </a>
+            </div>
+            <a id="scroll" href="#about">
+                <img src="./images/arrow.svg" alt="downwards arrow">
+                <p id="scroll-text">Scroll Down</p>
             </a>
         </div>
-        <a id="scroll" href="#about">
-            <img src="./images/arrow.svg" alt="downwards arrow">
-            <p id="scroll-text">Scroll Down</p>
-        </a>
     </div>
 
-    <div id="about" class="section-div">
-        <div class="start-end-div"></div>
-        <div id="image-container" data-cue="slideInUp">
-            <img src="./images/profile-photo.jpeg" alt="profile photo">
-            <div class="border-spin"></div>
-        </div>
-        <div id="txt-content">
+    <div id="about" class="section-div" data-cues="slideInUp">
+        <div id="text-content" data-cues="slideInUp">
             <h1>About</h1>
-            <div data-cues="slideInUp" data-group="abt">
-                <p>Hello, I'm Fran! I am a third-year Computer Science student currently undertaking a technology industrial placement at Morgan Stanley in the Investment Banking and Global Capital Markets Technology team.</p>
-                <p>With a strong interest in computer science, particularly software development, machine learning, and cyber security, I constantly pursue opportunities to expand my technical skills. For instance, I recently completed an <a href="https://www.udacity.com/certificate/e/ab46c81c-2dce-11ef-a93f-378afb3a7b70" target="_blank">AI Programming with Python Nanodegree</a>, where I trained a deep learning model to classify images of flowers into over 100 distinct species.</p>
-                <p>Moreover, I interned at an EV charging company across two placements, totalling 6 months, where I delivered technology projects to streamline business processes and drive productivity. For example, I developed a Flask web application to manage 1000+ QR code redirects using charge point data from an API. I also automated competitor utilisation and downtime analysis across 17,000+ UK locations using AWS Lambda, storing the data in a PostgreSQL database hosted on AWS RDS.</p>
-                <a href="./static/CV.pdf" target="_blank" id="resume-button">VIEW RESUME</a>
-            </div>
+            <p>Hello, I'm Fran! I am a third-year Computer Science student currently undertaking a technology industrial placement at Morgan Stanley in the Investment Banking and Global Capital Markets Technology team.</p>
+            <p>With a strong interest in computer science, particularly software development, machine learning, and cyber security, I constantly pursue opportunities to expand my technical skills. For instance, I recently completed an <a href="https://www.udacity.com/certificate/e/ab46c81c-2dce-11ef-a93f-378afb3a7b70" target="_blank">AI Programming with Python Nanodegree</a>, where I trained a deep learning model to classify images of flowers into over 100 distinct species.</p>
+            <p>Moreover, I interned at an EV charging company across two placements, totalling 6 months, where I delivered technology projects to streamline business processes and drive productivity. For example, I developed a Flask web application to manage 1000+ QR code redirects using charge point data from an API. I also automated competitor utilisation and downtime analysis across 17,000+ UK locations using AWS Lambda, storing the data in a PostgreSQL database hosted on AWS RDS.</p>
+            <a href="./static/CV.pdf" target="_blank" id="resume-button">VIEW RESUME</a>
         </div>
-        <div id="small-image-container" data-cue="slideInUp">
+        <div id="image-container">
             <img src="./images/profile-photo.jpeg" alt="profile photo">
             <div class="border-spin"></div>
         </div>
-        <div class="start-end-div"></div>
     </div>
 
     <div id="projects" class="section-div">
