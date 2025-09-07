@@ -135,6 +135,7 @@ body{
     background-color: var(--navy);
     font-size: 20px;
     padding: 30px;
+    overflow-x: hidden;
 }
 
 #home p:first-of-type{
