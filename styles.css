@@ -168,7 +168,7 @@ body{
 }
 
 #home #scroll{
-    margin: 90px 0 0;
+    margin-top: 120px;
     text-decoration: none;
     color: var(--off-white);
     display: flex;
@@ -407,7 +407,7 @@ body{
 
 #experiences{
     background-color: var(--dark-blue);
-    background-image: url("./images/navy-background.png");
+    background-image: url("./static/images/navy-background.png");
     padding: 80px 80px 20px;
 }
 
@@ -490,6 +490,10 @@ body{
     line-height: 2em;
 }
 
+#contact > p{
+    margin: auto;
+}
+
 #contact #email{
     height: 100px;
     background-color: var(--blue);
@@ -500,13 +504,13 @@ body{
     opacity: 1;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
 
 #contact #email:hover{
-    background-image: url("./images/copy-logo.png");
+    background-image: url("./static/images/copy-logo.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 70px;
@@ -519,6 +523,9 @@ body{
 }
 
 @media (min-width: 550px){
+    #contact #email{
+    justify-content: flex-start;
+}
     #contact #email img{
         display: block;
         width: 100px;
