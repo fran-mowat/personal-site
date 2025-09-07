@@ -565,7 +565,7 @@ body{
 }
 
 #snackbar{
-    visibility: visible;
+    visibility: hidden;
     background-color: black;
     opacity: 1;
     border-radius: 5px;
