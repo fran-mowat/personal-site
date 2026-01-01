@@ -114,3 +114,9 @@ projectsTiles.forEach(projectTile => {
     getRepoLanguages(projectTile.id);
 });
 
+const getYear = () => {
+    const yearContainer = document.getElementById('year');
+    yearContainer.innerHTML = new Date().getFullYear();
+};
+
+getYear();
